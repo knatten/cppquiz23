@@ -1,0 +1,1 @@
+The handlers for a try block are tried in order of appearance.

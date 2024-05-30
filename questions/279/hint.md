@@ -1,0 +1,1 @@
+`std::variant`s default constructor constructs a variant holding the value-initialized value of the first alternative.

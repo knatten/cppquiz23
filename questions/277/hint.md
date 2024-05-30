@@ -1,0 +1,1 @@
+How does C/C++ know where a C-style string ends? Think about what for instance `strlen()` does, and what an empty string literal needs to look like for that to work.

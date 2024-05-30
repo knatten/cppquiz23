@@ -1,0 +1,3 @@
+Though this piece of code might look strange at first sight, it is still valid C++ code and is known as [Duff's device](https://en.wikipedia.org/wiki/Duff%27s_device).
+
+According to the standard §[stmt.select]¶1, a `switch` statement can be followed (likewise, e.g., an `if` statement) by any valid statement including a compound (block) statement. The only difference from a general compound statement is that `case` and `default` labels can appear inside it. Jumping into the nested `do-while` block is legal (§[stmt.dcl]¶3), and its execution is not altered by the `case` labels (§[stmt.switch]¶6).

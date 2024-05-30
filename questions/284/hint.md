@@ -1,0 +1,1 @@
+In this regard, `std::string` does not behave like `std::vector`.

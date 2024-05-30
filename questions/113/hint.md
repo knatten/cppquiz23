@@ -1,0 +1,1 @@
+For overload resolution, a non-template function is a better match than a function template specialization.

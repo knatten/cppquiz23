@@ -1,0 +1,2 @@
+§[basic.fundamental]¶1
+Plain `char`, `signed char`, and `unsigned char` are three distinct types (...).

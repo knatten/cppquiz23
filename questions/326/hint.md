@@ -1,0 +1,1 @@
+No-one needs to instantiate the parameter types or return type at the point of function declaration.

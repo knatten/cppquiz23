@@ -1,0 +1,1 @@
+`NULL` is not necessarily an integer literal.

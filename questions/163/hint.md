@@ -1,0 +1,1 @@
+What is the type deduced by auto?

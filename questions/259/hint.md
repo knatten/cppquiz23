@@ -1,0 +1,1 @@
+`int` is at least as big as `char`. `char` can be either signed or unsigned.

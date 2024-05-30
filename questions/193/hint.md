@@ -1,0 +1,1 @@
+C++ provides alternatives for certain tokens.

@@ -1,0 +1,1 @@
+This might make it a bit hard for some implementations to set up exception handling?

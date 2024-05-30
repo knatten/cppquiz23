@@ -1,0 +1,1 @@
+`c` is an lvalue `char`. `&c` is a pointer to `c`, but is that pointer itself an lvalue or an rvalue?

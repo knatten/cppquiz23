@@ -1,0 +1,1 @@
+This question is about the lookup-rules for `foo` in the definition of `x`. Will the global `foo` or the member `foo` be chosen? If you don't know, think about some other scenarios for definition of class members, which scope would it make sense to have access to?

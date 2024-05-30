@@ -1,0 +1,1 @@
+`f.get()` throws the stored exception, if any. Here we call `f.wait()`.

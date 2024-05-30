@@ -1,0 +1,1 @@
+The answer would be different if the variable was named just `global`.

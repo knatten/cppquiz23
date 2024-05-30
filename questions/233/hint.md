@@ -1,0 +1,1 @@
+Can you overload two otherwise identical functions based on their ref qualifier alone?

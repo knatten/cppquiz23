@@ -1,0 +1,1 @@
+A string literal is not a `std::string`, but a `const char[]` . If the compiler was to choose `f(const std::string&)`, it would have to go through a user defined conversion and create a temporary `std::string`. Instead, it prefers `f(const void*)`, which requires no user defined conversion.

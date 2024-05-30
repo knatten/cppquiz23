@@ -1,0 +1,2 @@
+A declaration of a function template being explicitly specialized shall precede the declaration of the explicit specialization.
+During overload resolution, only the base function templates are considered, not specialisations.

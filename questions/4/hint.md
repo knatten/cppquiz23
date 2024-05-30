@@ -1,0 +1,1 @@
+What is the type of a floating point literal?

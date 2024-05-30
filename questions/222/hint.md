@@ -1,0 +1,1 @@
+`index()` returns the index of the type of the contained value.

@@ -1,0 +1,1 @@
+`arr` is an array of `X`, not of pointers to `X`. When an object of type `Y` is stored in it, it is converted to `X`, and we lose the "`Y` part" of the object. This is commonly known as "slicing".

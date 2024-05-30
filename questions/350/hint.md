@@ -1,0 +1,1 @@
+How does the parameter type to `qfunc` differ from the parameter type to the lambda?

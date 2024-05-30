@@ -1,0 +1,1 @@
+What does two `[[consecutive]]` square brackets usually mean? Could there be a parsing problem here?

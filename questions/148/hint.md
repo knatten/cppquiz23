@@ -1,0 +1,1 @@
+Accessing volatiles counts as a side effect.

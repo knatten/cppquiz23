@@ -1,0 +1,1 @@
+The value of each decimal character in the character set is one greater than the value of the previous.

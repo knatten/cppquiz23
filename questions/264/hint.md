@@ -1,0 +1,1 @@
+`C` lacks a user-provided constructor.

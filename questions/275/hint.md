@@ -1,0 +1,1 @@
+There are five standard signed integer types : `signed char`, `short int`, `int`, `long int`, and `long long int`. In this list, each type provides at least as much storage as those preceding it in the list.

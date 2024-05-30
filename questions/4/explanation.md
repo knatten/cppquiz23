@@ -1,0 +1,1 @@
+The type of a floating point literal is double.

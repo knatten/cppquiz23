@@ -1,0 +1,1 @@
+Conversion functions have return types, much like regular functions.

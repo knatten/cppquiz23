@@ -1,0 +1,1 @@
+`std::string{}` does not depend on a template parameter. But it's not a compilation error!

@@ -1,0 +1,1 @@
+Is `a` static? And what do we mean by "static" anyway? Think about the difference between static storage duration and external linkage.

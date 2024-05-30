@@ -1,0 +1,1 @@
+Have you heard about the "most vexing parse"? Does it apply here?

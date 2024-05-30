@@ -1,0 +1,1 @@
+This program compiles and runs just fine.

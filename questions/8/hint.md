@@ -1,0 +1,1 @@
+What is the dynamic type of `a` in `void g(A a)`?

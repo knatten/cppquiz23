@@ -1,0 +1,1 @@
+An `unsigned char` is usually implemented as an eight bit byte, but is it actually guaranteed to be so? Could it for instance have more bits than that?

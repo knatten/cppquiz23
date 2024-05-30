@@ -1,0 +1,1 @@
+When are non-local static variables, local static variables and local automatic variables initialized and destroyed? Does it matter if we put `static` in front of `A a`?

@@ -1,0 +1,1 @@
+Do pointers inherit the cv-qualifiers of its pointed-to type? How about arrays?

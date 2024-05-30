@@ -1,0 +1,1 @@
+Declaring a pointer does not require a completely-defined object type.

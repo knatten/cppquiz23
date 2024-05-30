@@ -1,0 +1,1 @@
+The result of the conditional operator is in this case a prvalue.

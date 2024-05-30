@@ -1,0 +1,1 @@
+Note that `C.i` is a reference. What happens when we assign a new value to a reference?

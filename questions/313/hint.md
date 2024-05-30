@@ -1,0 +1,2 @@
+- The arguments in the calls to `f` are *named* rvalue references.
+- An rvalue reference can't bind to an lvalue of the same type.

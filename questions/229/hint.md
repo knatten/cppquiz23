@@ -1,0 +1,1 @@
+Implicit capture happens only for variables with automatic storage duration.

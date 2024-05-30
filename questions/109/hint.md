@@ -1,0 +1,1 @@
+What is the type of `print`, and how will it match the template parameter?

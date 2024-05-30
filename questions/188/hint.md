@@ -1,0 +1,1 @@
+Why are string literals constant?

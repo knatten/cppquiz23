@@ -1,0 +1,1 @@
+When are non-local static variables initialized? When are local variables initialized? When are they destroyed?

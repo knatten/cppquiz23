@@ -1,0 +1,1 @@
+`c` is not destroyed as part of the regular exit from the try block, but as part of stack unwinding after the exception gets thrown. When stack unwinding starts, the not-yet-destroyed objects created in the try block are destroyed in the reverse order of their construction.

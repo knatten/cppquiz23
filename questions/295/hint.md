@@ -1,0 +1,1 @@
+Temporary objects are destroyed as the last step in evaluating the full-expression that contains the point where they were created.

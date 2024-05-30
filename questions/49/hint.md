@@ -1,0 +1,1 @@
+When are temporaries destroyed? What happens if you bind a const reference to it?

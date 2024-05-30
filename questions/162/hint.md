@@ -1,0 +1,1 @@
+Which scopes and in which order the compiler should examine when it sees the call to a function `f()` inside `g()`?

@@ -1,0 +1,1 @@
+The result would be the same if we called `f(i)` only once.

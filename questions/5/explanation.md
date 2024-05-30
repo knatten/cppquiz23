@@ -1,0 +1,1 @@
+The initialization order of member variables is determined by their order of declaration, not their order in the initialization list.

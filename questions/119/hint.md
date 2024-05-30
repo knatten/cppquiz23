@@ -1,0 +1,1 @@
+At which point in the program is the name `p` declared?

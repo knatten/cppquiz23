@@ -1,0 +1,1 @@
+The meaning of the second argument is different for the two constructors.

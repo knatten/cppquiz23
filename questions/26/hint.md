@@ -1,0 +1,1 @@
+What happens when you divide an integer by zero?

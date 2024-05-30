@@ -1,0 +1,1 @@
+Is there a difference between the two `extern` syntaxes? Something to do with declarations and definitions?

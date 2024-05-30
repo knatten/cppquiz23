@@ -1,0 +1,1 @@
+Whether you post-increment or pre-increment i, its value does not change until after the loop body has executed.

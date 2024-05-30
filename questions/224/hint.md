@@ -1,0 +1,1 @@
+Is it allowed to define a pure virtual function?

@@ -1,0 +1,1 @@
+Argument-dependent name lookup, aka Koenig lookup, applies.

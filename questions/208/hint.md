@@ -1,0 +1,1 @@
+What does the `[]` operator do if the key is not present?

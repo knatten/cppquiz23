@@ -1,0 +1,1 @@
+`min()` and `max()` return references, not temporaries.

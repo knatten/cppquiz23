@@ -1,0 +1,1 @@
+`x` and `y` both go through integer promotions before being multiplied, resulting in another type than `short`.

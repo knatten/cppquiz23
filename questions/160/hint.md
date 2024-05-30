@@ -1,0 +1,1 @@
+Does an overriding function in a derived class acquire default arguments from the function it overrides?

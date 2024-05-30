@@ -1,0 +1,1 @@
+This is a way to get polymorphic behaviour for `operator <<`.

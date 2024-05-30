@@ -1,0 +1,1 @@
+Reference collapsing ensures that `int&&&` turns into `int&`, while `int&&` stays as `int&&`.

@@ -1,0 +1,1 @@
+What does the standard say about the evaluation order of elements in an initializer list?

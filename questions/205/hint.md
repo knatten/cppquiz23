@@ -1,0 +1,1 @@
+Would the result be different of we removed `constexpr` from the declaration of `id`?

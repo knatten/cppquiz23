@@ -1,0 +1,1 @@
+Which type should `0` be converted to? Is one conversion better than the other?

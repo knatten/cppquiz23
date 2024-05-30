@@ -1,0 +1,1 @@
+The default open mode in the constructor does not set `std::ios_base::ate`, so where in the buffer will the next character be written when we call `operator<<`?

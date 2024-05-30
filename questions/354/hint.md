@@ -1,0 +1,1 @@
+One of the objects does not get destroyed

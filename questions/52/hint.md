@@ -1,0 +1,1 @@
+What does `B` have to know about `A` in order to declare `A::createB()` a friend?

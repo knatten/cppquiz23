@@ -1,0 +1,1 @@
+`&&` has higher precedence than `||`. Also think about short-circuiting.

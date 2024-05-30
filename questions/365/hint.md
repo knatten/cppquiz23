@@ -1,0 +1,1 @@
+Integral promotion is applied to the operands. The sizes of the integral types are implementation defined.

@@ -1,0 +1,1 @@
+"Everything that can be a declaration, is one."

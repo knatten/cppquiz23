@@ -1,0 +1,1 @@
+If every valid specialization of a variadic template requires an empty template parameter pack, the program is ill-formed, no diagnostic required.

@@ -1,0 +1,1 @@
+If not all template arguments are explicitly specified, the rest are deduced.

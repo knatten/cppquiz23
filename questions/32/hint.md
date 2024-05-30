@@ -1,0 +1,1 @@
+What is the difference between direct initialization and copy initialization? Do they in any way relate to the copy constructor and copy assignment operator?

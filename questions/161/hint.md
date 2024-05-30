@@ -1,0 +1,1 @@
+While the code can be difficult to understand, with the interleaved `switch` and `do while` constructs, try to step through the code line by line in your head, keeping track of the values of `i` and `n`.

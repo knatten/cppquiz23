@@ -1,0 +1,1 @@
+What are the scopes of the two names `f`?

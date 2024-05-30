@@ -1,0 +1,1 @@
+C++ uses short-circuit evaluation in this case

@@ -1,0 +1,1 @@
+What is the lambda return type?

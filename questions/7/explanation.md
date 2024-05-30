@@ -1,0 +1,1 @@
+As long as `A::f()` is not virtual, `A::f()` will always be called, even if the reference or pointer is actually referring to an object of type `B`.

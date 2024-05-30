@@ -1,0 +1,1 @@
+How is `T` deduced for the recursive calls to `sum`?

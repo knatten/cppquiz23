@@ -1,0 +1,1 @@
+A typedef-name is a synonym for another type.

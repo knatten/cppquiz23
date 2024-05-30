@@ -1,0 +1,1 @@
+Arrays and pointers are not the same, but can often be used interchangeably.

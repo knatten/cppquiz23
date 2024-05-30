@@ -1,0 +1,1 @@
+The `j` inside `main` shadows the global `j`.

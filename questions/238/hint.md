@@ -1,0 +1,1 @@
+`""` is a string literal, which can be implicitly converted to a pointer.

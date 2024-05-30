@@ -1,0 +1,1 @@
+A conversion function is never used to convert an object to void.

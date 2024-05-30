@@ -1,0 +1,1 @@
+An implicit conversion sequence is used, and `operator bool() const` gets called. There is however no built-in `operator+` or `operator==` for bools, so one more conversion is used in the sequence.

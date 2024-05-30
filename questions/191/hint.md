@@ -1,0 +1,1 @@
+`namespace` is a C++ concept not present in C. How does this affect `extern "C"` variables declared inside namespaces?

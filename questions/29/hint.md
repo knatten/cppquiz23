@@ -1,0 +1,1 @@
+Are there times when virtual functions are not considered virtual?
