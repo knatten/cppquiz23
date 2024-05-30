@@ -1,7 +1,7 @@
 
 ## Porting CppQuiz.org questions to C++23
 
-CppQuiz.org is an open source C++ quiz site. If you're unfamiliar with it, you can read more in [its "About" section](http://cppquiz.org/quiz/about/).
+CppQuiz.org is an open source C++ quiz site. If you're unfamiliar with it, you can read more in [its "About" section](https://cppquiz.org/quiz/about/).
 
 All the CppQuiz questions are currently targetting C++17. We need to update them for C++23. Most questions will still have the same answers, we just need to update the explanations and references to the standard. A few questions will also have different answers.
 
