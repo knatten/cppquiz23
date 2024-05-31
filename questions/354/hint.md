@@ -1,1 +1,1 @@
-One of the objects does not get destroyed
+One of the objects does not get destroyed.
