@@ -1,1 +1,1 @@
-If a parameter is of reference type, the type referred to is used for type deduction. Also, it is allowed to deduce an argument type to a more cv-qualified type.
+If a parameter is of a reference type, the type referred to is used for type deduction. Also, it is allowed to deduce an argument type to a more cv-qualified type.
