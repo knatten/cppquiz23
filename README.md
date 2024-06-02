@@ -5,7 +5,9 @@ CppQuiz.org is an open source C++ quiz site. If you're unfamiliar with it, you c
 
 All the CppQuiz questions are currently targetting C++17. We need to update them for C++23. Most questions will still have the same answers, we just need to update the explanations and references to the standard. A few questions will also have different answers.
 
-Doing this all by myself is going to take months, so I would very much appreciate some help from the community. To make that as simple as possible, I've created this repository containing all the questions. There is a [directory for each question](/questions), named after the question number. That directory contains the source code of the question in a `.cpp` file, the hint and explanation in `.md` files, as well as a `README.md` explaining everything you need to do to port the question. There's also an issue for each question, making it easier to track progress. The issue has the same information as the `README.md` file.
+Doing this all by myself is going to take months, so I would very much appreciate some help from the community. You can also [win a C++ book](https://blog.knatten.org/2024/06/02/help-get-cppquiz-to-c23-and-win-a-book/)!
+
+To make helping as simple as possible, I've created this repository containing all the questions. There is a [directory for each question](/questions), named after the question number. That directory contains the source code of the question in a `.cpp` file, the hint and explanation in `.md` files, as well as a `README.md` explaining everything you need to do to port the question. There's also an issue for each question, making it easier to track progress. The issue has the same information as the `README.md` file.
 
 As soon as we've updated all the questions in this repository, I'll import them back into CppQuiz, and from then on CppQuiz will always ask about C++23.
 
