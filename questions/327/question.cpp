@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 struct S {
     S(int i) : i_(i){} 
