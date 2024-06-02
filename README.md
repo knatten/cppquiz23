@@ -9,26 +9,24 @@ Doing this all by myself is going to take months, so I would very much appreciat
 
 As soon as we've updated all the questions in this repository, I'll import them back into CppQuiz, and from then on CppQuiz will always ask about C++23.
 
-### How to help porting questions
-First of all, assign some of the issues to yourself, to avoid several people working on porting the same questions. A simple way to do this is to just find a page of [unassigned questions](https://github.com/knatten/cppquiz23/issues?q=is%3Aissue+is%3Aopen+no%3Aassignee), tick the box to select all the questions on that page, and assign them to yourself in one go. Don't worry if you can't finish them all, you can just unassign them later if it takes longer than you expected or you lose interest.
+## How to help
 
-There are two ways to add your contributions, listed below. I prefer the first alternative, but if that prevents you from contributing, the second is also ok.
+You can help by porting questions or reviewing pull requests:
 
-#### Contributing using a fork and pull requests
-1. Fork this repo by clicking the "Fork" button at the top right.
-1. Pick the issue for a question you want to port. Add a comment that you'll be handling that issue.
-1. Follow the instructions in the issue to port the question.
-1. Make a pull request. Porting several questions in one PR is fine.
+### Porting questions
+First, fork this repo by clicking the "Fork" button at the top right.
 
-#### Contributing without a fork
-If you think forking and PRs is too cumbersome, or you are not able to do this for other reasons, I'd still appreciate your help:
-1. Pick the issue for a question you want to port. Add a comment that you'll be handling that issue.
-1. Follow the instructions in the issue to port the question.
-1. Paste the updated files as comments to the issue.
+If you're a collaborator in this repo, assign some of the issues to yourself, to avoid several people working on porting the same questions. A simple way to do this is to just find a page of [unassigned questions](https://github.com/knatten/cppquiz23/issues?q=is%3Aissue+is%3Aopen+no%3Aassignee), tick the box to select all the questions on that page, and assign them to yourself in one go. Don't worry if you can't finish them all, you can just unassign them later if it takes longer than you expected or you lose interest.
+
+If you're not a collaborator in this repo, just port one question at a time and add a pull request, or ask @knatten to become a collaborator if you want to port many.
+
+Then follow the instructions in the issue to port the question.
+
+### Reviewing pull requests
+Pick an open pull request, check that the changes look good and that updated references are correct (point to the right place in the standard, quotes are correct etc.). Ask the contributor for changes if needed, otherwise comment "LGTM" in the pull request. I'll handle merging.
 
 ### Other ways to help
 - Look for questions labeled `help wanted`. It means the person responsible needs a second pair of eyes.
-- Look at pull requests, review them and comment `LGTM` if they should be merged.
 - Other ideas for help are also welcome, please get in touch (see [Questions](#questions) below).
 
 ### Questions
