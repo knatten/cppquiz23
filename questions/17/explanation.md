@@ -12,6 +12,6 @@ Initialization order is defined in  §[class.base.init]¶13:
 - (...)
 - Finally, the compound-statement of the constructor body is executed."
 
-Destruction order is defined in §[class.dtor]¶9:
+Destruction order is defined in §[class.dtor]¶13:
 
-"After executing the body of the destructor and destroying any automatic objects allocated within the body, a destructor for class X calls (...) the destructors for X’s non-virtual direct base classes"
+"After executing the body of the destructor and destroying any objects with automatic storage duration allocated within the body, a destructor for class X calls (...) the destructors for X's non-virtual direct base classes"
