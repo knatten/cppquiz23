@@ -2,12 +2,12 @@ The main question here is about the evaluation order of the two `++i` expression
 
 Two questions remain: In which order are the two `++i` expressions evaluated to initialize the parameters, and when do the increments of `i` take effect?
 
-First of all, the evaluation order of the two `++i` expressions is unspecified. §[expr.call]¶5:
+First of all, the evaluation order of the two `++i` expressions is unspecified. §[expr.call]¶7:
 >  The initialization of a parameter, including every associated value computation and side effect, is indeterminately sequenced with respect to that of any other parameter.
 
 What does "indeterminately sequenced" mean?
 
-§[intro.execution]¶15:
+§[intro.execution]¶8:
 > Evaluations A and B are indeterminately sequenced when either A is sequenced before B or B is sequenced before A, but it is unspecified which.
 
 So from the two quotes above we see that they can happen in either order, and importantly that all side effects of the first evaluation (whichever that might be) are guaranteed to be completed before the second one gets evaluated.
