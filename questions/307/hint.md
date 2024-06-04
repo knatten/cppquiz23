@@ -1,1 +1,1 @@
-Does `S{}` necessarily call the default constructor?
+Does `S{}` call the default constructor?
