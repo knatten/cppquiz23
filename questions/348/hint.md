@@ -1,1 +1,1 @@
-Specialization of class template members are only implicitly instantiated when needed.
+A member of a templated class is only implicitly instantiated when needed.
