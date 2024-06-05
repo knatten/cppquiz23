@@ -1,1 +1,1 @@
-`-->` is actually two operators
+`-->` is actually two operators.
