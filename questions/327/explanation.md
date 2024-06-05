@@ -5,6 +5,7 @@ The question then is whether `std::addressof` calls `S::operator&` at all.
 §[specialized.addressof]¶1 in the standard has the answer:
 
 > `template <class T> constexpr T* addressof(T& r) noexcept;`
+>
 > *Returns:* The actual address of the object or function referenced by `r`, even in the presence of an overloaded `operator&`.
 
 So `addressof` ignores the overloaded `operator&`, and this is indeed its purpose. It computes the *actual* address of `s`, and we can then print its member `i_` which holds the value `2`.

@@ -1,1 +1,1 @@
-No hint
+Do `std::addressof(s)` and `&s` mean the same thing?
