@@ -22,5 +22,4 @@ int main()
     foo(j);
     bar(i);
     bar(j);
-
 }
