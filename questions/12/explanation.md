@@ -2,7 +2,7 @@ Since `a` is a static local variable, it is automatically zero-initialized. This
 
 §[basic.start.static]¶2 in the standard:
 
-> If constant initialization is not performed, a variable with static storage duration (6.7.1) or thread storage duration (6.7.2) is zero-initialized (11.6)
+> If constant initialization is not performed, a variable with static storage duration (6.7.5.2) or thread storage duration (6.7.5.3) is zero-initialized (9.4).
 
 `a` has static storage duration and is not constant initialized , so it gets zero-initialized.
 
