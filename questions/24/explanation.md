@@ -1,3 +1,4 @@
 Unsigned integers have well defined behaviour when they overflow. When you go one above the largest representable unsigned int, you end up back at zero.
 
-According to §[basic.fundamental]¶4 in the C++ standard: "Unsigned integers, declared unsigned, shall obey the laws of arithmetic modulo 2^n where n is the number of bits in the value representation of that particular size of integer."
+According to §[basic.fundamental]¶2 in the C++ standard: 
+> The range of representable values for the unsigned type is 0 to 2N − 1 (inclusive); arithmetic for the unsigned type is performed modulo 2N .
