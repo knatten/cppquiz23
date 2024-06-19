@@ -1,4 +1,2 @@
-The Standard says this about jump statements:
-
-§[stmt.jump]¶2 Transfer [...] back past an initialized variable with automatic storage duration involves the destruction of objects with automatic storage duration that are in scope at the point transferred from but not at the point transferred to.
-
+The Standard says this about jump statements in §[stmt.jump]¶2
+> [Note 1: On exit from a scope (however accomplished), objects with automatic storage duration (6.7.5.4) that have been constructed in that scope are destroyed in the reverse order of their construction.
