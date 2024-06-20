@@ -7,9 +7,11 @@ The type of a string literal is "array of `n` `const char`" (§[lex.string]¶8),
 This problem does however not result in a compiler error, since the compiler is able to find another constructor that matches!
 
 §[over.match.list]¶1 explains the rules very clearly:
-"When objects of non-aggregate class type T are list-initialized (...), overload resolution selects the constructor in two phases:
-— Initially, the candidate functions are the initializer-list constructors of the class T and the argument list consists of the initializer list as a single argument [which we have seen didn't match].
-— If no viable initializer-list constructor is found, overload resolution is performed again, where the candidate functions are all the constructors of the class T and the argument list consists of the elements of the initializer list [in our case, the two string literals `","` and `";"` ]".
+> When objects of non-aggregate class type `T` are list-initialized (...), overload resolution selects the constructor in two phases:
+>
+> — If the initializer list is not empty or `T` has no default constructor, overload resolution is first performed where the candidate functions are the initializer-list constructors (9.4.5) of the class `T` and the argument list consists of the initializer list as a single argument. [which we have seen didn't match].
+>
+> —  Otherwise, or if no viable initializer-list constructor is found, overload resolution is performed again, where the candidate functions are all the constructors of the class T and the argument list consists of the elements of the initializer list. [in our case, the two string literals `","` and `";"` ].
 
 Going back to §[vector.overview], we find this candidate:
 
