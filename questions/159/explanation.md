@@ -1,1 +1,5 @@
-According to §[intro.execution]¶18 in the standard, when calling a function, every value computation and side effect associated with any argument expression, is **sequenced before the function is entered**. Hence, in the expression `f(i++)`, `f` is called with a parameter of the original value of `i`, but `i` is incremented before entering the body of `f`.
+According to §[intro.execution]¶11 in the standard, when calling a function:
+
+> every argument expression (...) [is] sequenced before every expression or statement in the body of the called function.
+
+Hence, in the expression `f(i++)`, `f` is called with a parameter of the original value of `i`, but `i` is incremented before entering the body of `f`.
