@@ -1,5 +1,9 @@
-Although this program probably outputs `8` on your computer, it's not guaranteed to do so by the standard. All we can be sure of is what's specified in §[basic.fundamental]¶1:
+Although this program probably outputs `8` on your computer, it's not guaranteed to do so by the standard. All we can be sure of is that it's _at least_ 8 bits.
 
-"Objects declared as characters (`char`) shall be large enough to store any member of the implementation’s basic character set. (...) A `char`, a `signed char`, and an `unsigned char` occupy the same amount of storage."
+Table 14 in §[basic.fundamental] specifies the size of `signed char` as 8. But we're interested in `unsigned char`, not `signed char`.
 
-So `unsigned char` is the same size as `char`, which is large enough to store any member of the implementation’s basic character set - but not necessarily 8.
+§[basic.fundamental]¶3 however explains that an unsigned type is similar to the corresponding signed type:
+
+>  An unsigned integer type has the same object representation, value representation, and alignment requirements (6.7.6) as the corresponding signed integer type.
+
+So `unsigned char` is the same size as `signed char`, which is at least 8 bits.
