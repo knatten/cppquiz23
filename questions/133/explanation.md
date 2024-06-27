@@ -1,10 +1,15 @@
-On the first line of `main()`, `d1` is initialized, in the order `A`, `B`, `C`, `D`. That order is defined by §[class.base.init]¶13:
-"
-— First, and only for the constructor of the most derived class (§ 6.7.2), virtual base classes are initialized in the order they appear on a depth-first left-to-right traversal of the directed acyclic graph of base classes, where “left-to-right” is the order of appearance of the base classes in the derived class base-specifier-list.
-— Then, direct base classes are initialized in declaration order as they appear in the base-specifier-list 
-(...)
-— Finally, the compound-statement of the constructor body is executed.
-"
+On the first line of `main()`, `d1` is initialized, in the order `A`, `B`, `C`, `D`. That order is defined by §[class.base.init]¶13.1:
+
+> In a non-delegating constructor, initialization proceeds in the following order:
+>
+> — First, and only for the constructor of the most derived class (§[intro.object]), virtual base classes are initialized in the order they appear on a depth-first left-to-right traversal of the directed acyclic graph of base classes, where “left-to-right” is the order of appearance of the base classes in the derived class *base-specifier-list*.
+>
+> — Then, direct base classes are initialized in declaration order as they appear in the *base-specifier-list* (...).
+>
+> — (...)
+>
+> — Finally, the *compound-statement* of the constructor body is executed.
+
 So the output is `ABCD`.
 
 On the second line, `d2` is initialized. But why are the constructors (as opposed to the copy constructors) for the base classes, called? Why do we see `ABCd` instead of `abcd`?

@@ -7,6 +7,7 @@ Only in the first case is `T` deduced as `const`, and `1` printed. In the other 
 Let `P` be the parameter type in the function template.
 
 For `foo`, `P` is `T&`, but we ignore the reference part. §[temp.deduct.call]¶3:
+
 > If `P` is a reference type, the type referred to by `P` is used for type deduction.
 
 So for `foo`, we simply use `T` for type deduction.
@@ -62,4 +63,4 @@ If you read the rest of §[temp.deduct.call]¶3, you might have noticed:
 
 > If `P` is a cv-qualified type, the top-level cv-qualifiers of `P`'s type are ignored for type deduction.
 
-So when `P` is `const T&`, should we ignore `const` and only use `T` for type deduction? We should not, since `const` here is not a _top-level_ cv-qualifier. What is a top-level cv-qualifier? If `P` was `const T * const`, the top-level qualifier would be the rightmost `const`. You can have a const pointer pointing to something const or non-const. With references on the other hand, you can have a _reference to const_, but not a _const reference to something_. References do not _have_ a top-level qualifier.
+So when `P` is `const T&`, should we ignore `const` and only use `T` for type deduction? We should not, since `const` here is not a *top-level* cv-qualifier. What is a top-level cv-qualifier? If `P` was `const T * const`, the top-level qualifier would be the rightmost `const`. You can have a const pointer pointing to something const or non-const. With references on the other hand, you can have a *reference to const*, but not a *const reference to something*. References do not have a top-level qualifier.

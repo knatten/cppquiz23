@@ -1,1 +1,1 @@
-In Arabic language, reading is from right to left
+In Arabic language, reading is from right to left.

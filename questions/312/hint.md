@@ -1,1 +1,1 @@
-The access specifiers in `: private A, B` /  `: public A, B` only apply to `A`, not `B`. The implicit access specifier for `B` depends on how the derived class is defined.
+The access specifiers in `: private A, B` / `: public A, B` only apply to `A`, not `B`. The implicit access specifier for `B` depends on how the derived class is defined.

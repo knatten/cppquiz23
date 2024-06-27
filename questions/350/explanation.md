@@ -5,7 +5,7 @@ Then, `q.func()` is called again, which prints `0`.
 
 ### Details about the call to `qfunc`:
 
-`std::function` is declared like this §[func.wrap.func]:
+`std::function` is declared like this §[func.wrap.func.general]:
 
 ```
 template<class R, class... ArgTypes>
@@ -18,10 +18,11 @@ class function<R(ArgTypes...)> {
 
 `takeFunc` explicitly specializes what kind of `std::function` it accepts (rather than e.g. being a function template that deduces it from the lambda we pass to it). It explicitly sets the return type `R` to `void`, and the template parameter pack `ArgTypes...` to `Q`. That means that the signature of `operator()` is `void operator()(Q) const`; taking `Q` by value.
  
-§[func.wrap.func.inv] continues:
+§[func.wrap.func.inv]¶1 continues:
  
 > `R operator()(ArgTypes... args) const;`
-> Returns: `INVOKE<R>(f, std​::​forward<ArgTypes>(args)...)` ([func.require]), where `f` is the target object ([func.def]) of `*this`.
+>
+> *Returns*: `INVOKE<R>(f, std​::​forward<ArgTypes>(args)...)` (§[func.require]), where `f` is the target object (§[func.def]) of `*this`.
 
 If we substitute the types in `INVOKE<R>(f, std​::​forward<ArgTypes>(args)...)`, we get `INVOKE<void>(f, std​::​forward<Q>(q))`, which just means `f(std::forward<Q>(q))`.
 
