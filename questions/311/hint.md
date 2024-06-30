@@ -1,1 +1,1 @@
-`Base` has no virtual functions
+`Base` has no virtual functions.
