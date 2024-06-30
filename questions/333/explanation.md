@@ -1,4 +1,4 @@
-There is no `-->` operator in C++, this is actually the two operators `--` and `>` placed next to each other. Whitespace in C++ is generally not significant, unless absolutely needed to separate adjacent tokens which would otherwise have a different meaning. §[lex.token] in the standard:
+There is no `-->` operator in C++, this is actually the two operators `--` and `>` placed next to each other. Whitespace in C++ is generally not significant, unless absolutely needed to separate adjacent tokens which would otherwise have a different meaning. §[lex.token]¶1 in the standard:
 
 > Blanks, horizontal and vertical tabs, newlines, formfeeds, and comments (collectively, “whitespace”), as described below, are ignored except as they serve to separate tokens.
 >
