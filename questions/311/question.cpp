@@ -1,6 +1,8 @@
 #include <iostream>
+#include <typeinfo>
 
-struct Base{
+struct Base
+{
 };
 
 struct Derived : Base
