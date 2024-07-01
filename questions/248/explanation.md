@@ -1,6 +1,6 @@
 `std::min()` and `std::max()` return references to their smallest/largest arguments, respectively. But what if they're equal?
 
-The C++17 standard says both for `std::min()` in §[alg.min.max]¶3  and for `std::max()` in §[alg.min.max]¶11:
+The C++ standard says both for `std::min()` in §[alg.min.max]¶2  and for `std::max()` in §[alg.min.max]¶10:
 
 > Returns the first argument when the arguments are equivalent.
 
