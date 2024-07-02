@@ -2,16 +2,22 @@ Even though these constructor invocations look strikingly similar, the one that 
 
 ### Details:
 
-In the constructor taking a C-style string (the `s1` case) the second argument is treated as how many character to take from the start of the C-style string.  §[string.cons]¶11:
+In the constructor taking a C-style string (the `s1` case) the second argument is treated as how many characters to take from the start of the C-style string.  §[string.cons]¶14:
 
-> `basic_string(const charT* s, size_type n, const Allocator& a = Allocator());`
-> Effects: Constructs an object of class `basic_­string` and determines its initial string value from the array of `charT` of length `n` whose first element is designated by `s`
+> `constexpr basic_string(const charT* s, size_type n, const Allocator& a = Allocator());`
+>
+> *Effects*: Constructs an object whose initial value is the range `[s, s + n)`.
 
-On the other hand, in the constructor that takes `basic_string` (the `s2` case) the second argument is treated as the position to _start_ copying the string from.  §[string.cons]¶4:
+On the other hand, in the constructor that takes `basic_string` (the `s2` case) the second argument is treated as the position to *start* copying the string from.  §[string.cons]¶5:
 
-> `basic_string(const basic_string& str, size_type pos, const Allocator& a = Allocator());`
-> Effects: Constructs an object of class `basic_­string` and determines the effective length `rlen` of the initial string value as `str.size() - pos`, as indicated in Table 57.
-
-Table 57 then goes on to explain that the data of the string starts at `pos`:
-
-> [the string data] points at the first element of an allocated copy of `rlen` consecutive elements of the string controlled by `str` beginning at position `pos`
+> `constexpr basic_string(const basic_string& str, size_type pos, const Allocator& a = Allocator());`
+>
+> (...)
+>
+> Let
+> 
+> — `s` be the value of `str` prior to this call and
+>
+> — `rlen` be `pos + min(n, s.size() - pos)` for the overloads with parameter `n`, and `s.size()` otherwise.
+>
+> *Effects*: Constructs an object whose initial value is the range `[s.data() + pos, s.data() + rlen)`.
