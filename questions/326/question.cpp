@@ -2,7 +2,7 @@
 
 struct S;
 
-S foo(S s); //S has only been forward declared at this point
+S foo(S s); // S has only been forward declared at this point
 
 struct S{};
 

@@ -19,7 +19,7 @@ size_t get_size_3(int (&arr)[10])
 int main()
 {
   int array[10];
-  //Assume sizeof(int*) != sizeof(int[10])
+  // Assume sizeof(int*) != sizeof(int[10])
   cout << (sizeof(array) == get_size_1(array));
   cout << (sizeof(array) == get_size_2(array));
   cout << (sizeof(array) == get_size_3(array));
