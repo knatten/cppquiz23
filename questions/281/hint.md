@@ -1,1 +1,1 @@
-A move constructor will not be implicitly declared if the user declares a copy constructor.  But do we need a move constructor to initialize `c2`?
+A move constructor will not be implicitly declared if the user declares a copy constructor. But do we need a move constructor to initialize `c2`?
