@@ -1,1 +1,1 @@
-Once a non-discarded return statement has been seen in a function, the return type deduced from that statement can be used in the rest of the function,
+Once a non-discarded `return` statement has been seen in a function, the return type deduced from that statement can be used in the rest of the function.
