@@ -1,1 +1,1 @@
-The first call to get() makes the state invalid.
+The first call to `get()` makes the state invalid.
