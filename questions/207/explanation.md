@@ -14,7 +14,7 @@ where `try_emplace` is defined by §[map.modifiers]¶4:
 
 `value_type` is just a `typedef` for `pair<const Key, T>`, which in our case is `pair<const int, int>`. So it inserts a `pair(42, int())`.
 
-`int()` is a *value-initialization*, which for non-class, non-array types means *zero-initialization* (see §[dcl.init]¶8). And according to §[dcl.init]¶6:
+`int()` is a *value-initialization*, which for non-class, non-array types means *zero-initialization* (see §[dcl.init]¶8). And according to §[dcl.init.general]¶6:
 
 > To zero-initialize an object or reference of type `T` means:
 > — if `T` is a scalar type (§[basic.types.general]), the object is initialized to the value obtained by converting the integer literal `0` (zero) to `T`;
