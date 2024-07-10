@@ -2,7 +2,7 @@
 
 Let's have a look at §[expr.cond]¶1 in the standard:
 
-> Every value computation and side effect associated with the first expression is sequenced before every value computation and side effect associated with the second or third expression.
+> The first expression is sequenced before the second or third expression (§[intro.execution]).
 
 This means that `f()` completes before `g()` or `h()`, and `f` is the first thing to get printed.
 
