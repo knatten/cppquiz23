@@ -1,11 +1,9 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
     int a = '0';
     char const &b = a;
-    cout << b;
+    std::cout << b;
     a++;
-    cout << b;
+    std::cout << b;
 }
