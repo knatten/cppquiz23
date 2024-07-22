@@ -1,12 +1,13 @@
-Normally, `static_assert(false)` causes compilation to fail. But in this case, it's contained inside a template which is never instantiated. Is the compiler then supposed to ignore it, or report an error?
+Since C++23, this construct is legal and the code prints `1`.
 
-§[temp.inst]¶8:
+Before [P2593](https://wg21.link/p2593), the §[temp.res.general]¶6.1 clause didn't contain an exception for `static_assert`s:
+
 > The program is ill-formed, no diagnostic required, if:
->[...]
-> a hypothetical instantiation of a template immediately following its definition would be ill-formed due to a construct that does not depend on a template parameter
+>
+> — no valid specialization, ignoring *static_assert-declaration*s that fail, can be generated for a template or a substatement of a constexpr if statement within a template and the template is not instantiated (...)
 
-The `static_assert(false)` does not depend on a template parameter, so if we were to instantiate `A`  immediately following its definition, `A` would always be ill-formed.
+So our program was ill-formed, no diagnostic required, and we had undefined behaviour.
+This was causing complications when writing useful compile-time checks prior to C++23.
+As a result, the behaviour was changed, and now the mere presence of such a declaration in a template definition has no effect (as opposed to actually instantiating the template), and the program is well-formed. §[dcl.pre]¶10:
 
-So our program is ill-formed, no diagnostic required, and we have undefined behaviour. 
-
-Note: At the time of writing, the latest gcc, clang and msvc all give a compilation error for this example.
+> In a *static_assert-declaration*, the *constant-expression* is contextually converted to `bool` and the converted expression shall be a constant expression (§[expr.const]). If the value of the expression when so converted is `true` or the expression is evaluated in the context of a template definition, the declaration has no effect.

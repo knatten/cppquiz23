@@ -1,1 +1,1 @@
-Just pick the worst possible answer in the dropdown.
+Note that the template is not instantiated here.
