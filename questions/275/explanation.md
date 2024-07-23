@@ -4,7 +4,7 @@ What *do* we know about the sizes of `long` and `int` though?
 
 §[basic.fundamental]¶1 in the standard:
 
-> There are five standard signed integer types: “`signed char`”, “`short int`”, “`int`”, “`long int`”, and “`long long int`”. In this list, each type provides at least as much storage as those preceding it in the list.
+> There are five *standard signed integer types*: “`signed char`”, “`short int`”, “`int`”, “`long int`”, and “`long long int`”. In this list, each type provides at least as much storage as those preceding it in the list.
 
 So we know that `long` is at least as big as `int`. But how big is an int? §[basic.fundamental]¶4:
 
