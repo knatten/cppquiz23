@@ -1,8 +1,14 @@
-`array` is an array of `unsigned char`, but is initialized with `unsigned int`s. The `unsigned int`s have to be converted to `unsigned char`s, so we might expect a narrowing diagnostic. §[dcl.init.aggr]¶3 in the standard says:
+`array` is an array of `unsigned char`, but is initialized with `unsigned int`s. The `unsigned int`s have to be converted to `unsigned char`s, and since narrowing is not allowed in aggregate-initialization from an initializer list, we might expect a compilation error.
 
-> (...) If the initializer-clause is an expression and **a narrowing conversion (§11.6.4) is required to convert the expression, the program is ill-formed**. (...)
+§[dcl.init.aggr]¶3:
 
-§[dcl.init.list].k.4¶7 tells us what a narrowing conversion is:
+> When an aggregate is initialized by an initializer list as specified in §[dcl.init.list], the elements of the initializer list are taken as initializers for the elements of the aggregate.
+ 
+And §[dcl.init.aggr]¶4:
+
+> For each explicitly initialized element (...) [if] a narrowing conversion §[dcl.init.list] is required to convert the expression, the program is ill-formed.
+
+§[dcl.init.list]¶7 tells us what a narrowing conversion is:
 
 >A narrowing conversion is an implicit conversion (...) from an integer type (...) to an integer type that cannot represent all the values of the original type
 
@@ -10,4 +16,4 @@ An `unsigned char` cannot represent all the values of an `unsigned int`, so we w
 
 > except where the source is a constant expression whose value after integral promotions will fit into the target type.
 
-So since `id` is `constexpr`, and both `id % 3` and `id % 5` fits in an `unsigned char`, the program is well-formed.
+So since `id` is `constexpr`, and both `id % 3` and `id % 5` fit in an `unsigned char`, the program is well-formed.
