@@ -1,1 +1,1 @@
-Implicit capture happens only for variables with automatic storage duration.
+Only local variables may be captured
