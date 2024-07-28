@@ -1,9 +1,24 @@
-There are two variables named `j` here. The first is the global one, the second is local to `main`. A variable is in scope from the point of its declaration until the end of the region in which it was declared, except for when another variable with the same name is in scope. 
+The line `int& i = j, j;` declares two variables `i` and `j`. (If this is surprising, remember that you can declare multiple variables at once, e.g. `int i, j, k;`. `i` here just happens to have an initializer.)
 
-It's easiest to first look at the scope of the local `j` declared inside `main`, which extends from the `,` to the `}`. The scope of the global `j` is from when it was declared until the end of the program, except for when the local `j` is in scope.
+So this program has two variables named `j`. The first is the global one, the second is local to `main`. Which one is used to initialize `i` in the expression `int& i = j`?
 
-So the reference `i` refers to the *global* `j`, since the local `j` is not yet in scope. When we set `j=2`, we modify the *local* `j`, and `i` is not affected.
+When initializing `i` with the expression `j`, we need to do name lookup for `j`. If the local `j` is in scope at that point in the program, it will be used, otherwise, the global `j` will be used.
 
-This example is almost identical to §[basic.scope.declarative]¶2 in the C++ standard, which has the following explanation:
+§[basic.scope.pdecl]¶1:
+> The locus of a declaration that is a declarator is immediately after the complete declarator
 
-> the identifier `j` is declared twice as a name (and used twice). The declarative region of the first `j` includes the entire example. The potential scope of the first `j` begins immediately after that `j` and extends to the end of the program, but its (actual) scope excludes the text between the `,` and the `}`. The declarative region of the second declaration of `j` (the `j` immediately before the semicolon) includes all the text between `{` and `}`, but its potential scope excludes the declaration of `i`. The scope of the second declaration of `j` is the same as its potential scope.
+So the *locus* of the local `j` is here:
+```
+int& i = j, j;
+            /\
+```
+
+And §[basic.lookup.general]¶2 says:
+
+> A program point *P* is said to follow any declaration in the same translation unit whose locus is before *P*.
+
+The locus of the local `j` is *after* the program point *P* where the reference `i` is bound, so *P* does not follow the declaration of the local `j`. 
+
+This means that name lookup for `j` in the expression `int& i = j` does not find the local `j`, but rather the global `j`, and `i` is bound to the global `j`.
+
+However, the program point where we set `j = 2` does follow the locus of the local `j`, so we modify the *local* `j`, and the `j` that `i` refers to is not affected.
