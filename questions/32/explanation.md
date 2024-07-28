@@ -10,4 +10,4 @@ So both our cases use the copy constructor.
 
 Not until `z = x;` do we have an actual assignment that uses the assignment operator.
 
-See <http://stackoverflow.com/questions/1051379/is-there-a-difference-in-c-between-copy-initialization-and-direct-initializati/1051468#1051468> for a more detailed discussion of direct vs. copy initialization.
+See <https://stackoverflow.com/a/1051468> for a more detailed discussion of direct vs. copy initialization.
