@@ -9,7 +9,7 @@ Then, `f` is called twice, taking the freshly created `initializer_list` by valu
 
 >  the `std::initializer_list<E>` object is constructed to refer to that array.
 
-So the `initializer_list` only refers to that array, it doesn't have a copy of it. A note in §[initializer_list.syn]¶1 spells it out verbatim:
+So the `initializer_list` only refers to that array, it doesn't have a copy of it. A note in §[initializer.list.syn]¶note-1 spells it out verbatim:
 
 > Copying an initializer list does not copy the underlying elements.
 
