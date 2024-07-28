@@ -1,1 +1,1 @@
-Only local variables may be captured
+Only local variables may be captured.
