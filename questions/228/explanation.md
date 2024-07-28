@@ -2,8 +2,12 @@ First, let's have a look at the initialization of `X::Var`. `Var(0, args...)` is
 
 `X<> x` in fact does just that, it instantiates the template with no arguments, which would be valid.
 
-However, §[temp.res]¶8.2 says:
-> [if] every valid specialization of a variadic template requires an empty template parameter pack
-> [the program is ill-formed, no diagnostic required.]
+However, §[temp.res.general]¶6.3 says:
+
+> The program is ill-formed, no diagnostic required, if:
+>
+> — (...)
+>
+> — every valid specialization of a variadic template requires an empty template parameter pack, (...)
 
 As we've seen, the only valid specialization requires an empty template parameter pack, so the program is ill-formed, no diagnostic required. When no diagnostic is required, the compiler is not required to diagnose the error, but execution of the program is undefined.
