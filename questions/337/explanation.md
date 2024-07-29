@@ -14,7 +14,7 @@ So `decltype(a)` is the type of `a`. The type of `a` is however *not* `const cha
 
 §[dcl.type.auto.deduct]¶3:
 
-> If the *placeholder-type-specifier* is of the form *type-constraint*<sub>opt</sub> `auto`, the deduced type `T'` replacing `T` is determined using the rules for template argument deduction. (...) Obtain `P` from `T` by replacing the occurrences of *type-constraint*<sub>opt</sub> `auto` either with a new invented type template parameter `U` (...). Deduce a value for `U` using the rules of template argument deduction from a function call, where `P` is a function template parameter type and the corresponding argument is `E`. (...) `T'` is obtained by substituting the deduced `U` into `P`.
+> If the *placeholder-type-specifier* is of the form *type-constraint<sub>opt</sub>* `auto`, the deduced type `T'` replacing `T` is determined using the rules for template argument deduction. (...) Obtain `P` from `T` by replacing the occurrences of *type-constraint<sub>opt</sub>* `auto` either with a new invented type template parameter `U` (...). Deduce a value for `U` using the rules of template argument deduction from a function call, where `P` is a function template parameter type and the corresponding argument is `E`. (...) `T'` is obtained by substituting the deduced `U` into `P`.
 
 In other words, the type of `a` will be deduced the same way as if we passed "Hello, World!" as a template argument of a function.
 
