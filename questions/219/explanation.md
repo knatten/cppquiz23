@@ -6,7 +6,8 @@ However, when `sum` calls itself, it explicitly specifies `T` (it does `sum<T>(a
 
 For `n1`, `T` is always `double`, so `sum` always takes a `double` as the first parameter, and returns a `double`. The sum is `(0.5 + (1 + (0.5 + (1)))) == 3`. (Each set of parentheses denotes a recursive call to `sum`).
 
-For `n2` however, `T` is always `int`, so `sum` always takes an `int` as the first parameter, and returns a `int`, even when we pass `0.5`. What happens when we pass a `double` argument to an `int` parameter? According to §[conv.fpint]¶1 in the C++ standard: 
+For `n2` however, `T` is always `int`, so `sum` always takes an `int` as the first parameter, and returns an `int`, even when we pass `0.5`. What happens when we pass a `double` argument to an `int` parameter? According to §[conv.fpint]¶1 in the standard:
+
 > A prvalue of a floating point type can be converted to a prvalue of an integer type. The conversion truncates; that is, the fractional part is discarded.
 
-So in the case of `n2`, each time we pass `0.5`, it gets truncated to `0`, and the sum is (1 + (0+ (1 + (0)))) == 2.
+So in the case of `n2`, each time we pass `0.5`, it gets truncated to `0`, and the sum is `(1 + (0 + (1 + (0)))) == 2`.
