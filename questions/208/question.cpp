@@ -1,6 +1,5 @@
 #include <iostream>
 #include <map>
-using namespace std;
 
 bool default_constructed = false;
 bool constructed = false;
@@ -14,8 +13,8 @@ public:
 };
 
 int main() {
-    map<int, C> m;
+    std::map<int, C> m;
     m[7] = C(1);
 
-    cout << default_constructed << constructed << assigned;
+    std::cout << default_constructed << constructed << assigned;
 }
