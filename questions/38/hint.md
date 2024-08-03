@@ -1,1 +1,1 @@
-`decltype((a))`is not the same as `decltype(a)`.
+`decltype((a))` is not the same as `decltype(a)`.
