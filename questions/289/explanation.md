@@ -12,6 +12,6 @@ For the second call, the lambda is called again, returning a post-incremented `b
 
 §[expr.prim.lambda.closure]¶1:
 
-> The type of a lambda-expression (which is also the type of the closure object) is a unique, unnamed non-union class type, called the closure type
+> The type of a  *lambda-expression* (which is also the type of the closure object) is a unique, unnamed non-union class type, called the *closure type*
 
-So there is just one unique closure type for this expression, meaning that the `static int b` is the same for both calls (it's a static local variable in the function call operator of the closure type). For the second call, `b` retains the value of `2` from the previous call, which is assigned to `a` and then printed.
+The *lambda-expression* is the expression `[]() { static int b = 1; return b++; }`. A lambda-expression that is evaluated more than once is still the same expression on each evaluation, so it has the same type in each evaluation. This means the `static int b` is the same object for both calls (it's a static local variable in the function call operator of the unique closure type). For the second call, `b` retains the value of `2` from the previous call, which is assigned to `a` and then printed.
