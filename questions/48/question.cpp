@@ -5,10 +5,10 @@
 int main() {
   std::string x = "x";
 
-  std::async(std::launch::async, [&x]() {
+  (void)std::async(std::launch::async, [&x]() {
     x = "y";
   });
-  std::async(std::launch::async, [&x]() {
+  (void)std::async(std::launch::async, [&x]() {
     x = "z";
   });
 
