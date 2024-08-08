@@ -1,1 +1,1 @@
-`C c2 = c1` is copy initialization, not assignment.
+`C c2 = c1` is copy-initialization, not assignment.
