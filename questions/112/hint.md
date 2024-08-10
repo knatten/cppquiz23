@@ -1,3 +1,3 @@
-When members are not mentioned in the member initializer list, when is it initialized?
+When members are not mentioned in the member initializer list, when are they initialized?
 
-Remember that an rvalue reference is an lvalue (if that doesn't make sense, read <http://isocpp.org/blog/2012/11/universal-references-in-c11-scott-meyers>. Search for "In widget".)
+Note that the expression `b.a`, which names a data member of an rvalue reference, is an lvalue here.
