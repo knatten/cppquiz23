@@ -1,19 +1,17 @@
 #include <iostream>
 
-using namespace std;
-
 template<typename T>
 void f(T) {
-    cout << 1;
+    std::cout << 1;
 }
 
 template<>
 void f(int) {
-    cout << 2;
+    std::cout << 2;
 }
 
 void f(int) {
-    cout << 3;
+    std::cout << 3;
 }
 
 int main() {
