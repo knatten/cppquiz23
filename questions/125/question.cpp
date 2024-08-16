@@ -1,10 +1,8 @@
 #include <iostream>
 
-using namespace std;
-
 template <class T> void f(T) {
   static int i = 0;
-  cout << ++i;
+  std::cout << ++i;
 }
 
 int main() {
