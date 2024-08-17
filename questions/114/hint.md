@@ -1,3 +1,3 @@
-How does const-ness of an object affect members?
-Is an object pointed to by a const pointer, itself const?
-What is the const-ness of an object returned by a const `vector::operator[]`?
+How does constness of an object affect members?
+Is the object that a const pointer points to also const?
+What is the constness of an object returned by a const `vector::operator[]`?
