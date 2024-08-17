@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 struct A {};
 struct B {};
 
@@ -10,19 +8,19 @@ struct X;
 
 template<>
 struct X<A> {
-   static void f() { cout << 1; }
+    static void f() { std::cout << 1; }
 };
 
 template<>
 struct X<B> {
-   static void f() { cout << 2; }
+    static void f() { std::cout << 2; }
 };
 
-template< template<typename T = B> class C>
+template<template<typename T = B> class C>
 void g() {
-   C<>::f();
+    C<>::f();
 }
 
 int main() {
-   g<X>();
+    g<X>();
 }
