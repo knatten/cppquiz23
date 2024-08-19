@@ -1,1 +1,1 @@
-Plain char, signed char, and unsigned char are three distinct types.
+Plain `char`, `signed char`, and `unsigned char` are three distinct types.
