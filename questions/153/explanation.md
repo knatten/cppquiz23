@@ -1,6 +1,4 @@
-According to §[lex.string]¶8 in the standard:
-
-> A narrow string literal has type “array of *n* `const char`”
+According to §[tab:lex.string.literal] in the standard, an ordinary string literal has type “array of *n* `const char`”
 
 The array of *n* `const char` decays to a pointer to `const char`. That pointer to `const char` does not implicitly convert to a pointer to non-const `char`.
 
