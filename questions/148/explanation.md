@@ -6,4 +6,6 @@ According to §[intro.execution]¶7, reading the `volatile` `a` is a side effect
 And these side effecting reads are unsequenced, which results in undefined behavior. §[intro.execution]¶10:
 > Except where noted, evaluations of operands of individual operators and of subexpressions of individual expressions are unsequenced.
 > (...)
-> If a side effect on a memory location is unsequenced relative to either another side effect on the same memory location or a value computation using the value of any object in the same memory location, and they are not potentially concurrent, the behavior is undefined.
+> If a side effect on a memory location is unsequenced relative to either another side effect on the same memory location or a value computation using the value of any object in the same memory location, and they are not potentially concurrent (§[intro.multithread]), the behavior is undefined.
+
+("Potentially concurrent" is only relevant when there is more than one thread.)
