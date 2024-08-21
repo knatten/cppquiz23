@@ -4,9 +4,9 @@ According to §[lex.string]¶8 in the standard:
 
 The array of *n* `const char` decays to a pointer to `const char`. That pointer to `const char` does not implicitly convert to a pointer to non-const `char`.
 
-A note in §[conv.qual]¶4 extrapolates from the preceeding normative passages:
+§[conv.qual]¶note-3 extrapolates from the preceding normative passages:
 
-> a prvalue of type “pointer to `cv1 T`” can be converted to a prvalue of type “pointer to `cv2 T`” if “`cv2 T`” is more cv-qualified than “`cv1 T`”.
+> A prvalue of type “pointer to *cv1* `T`” can be converted to a prvalue of type “pointer to *cv2* `T`” if “*cv2* `T`” is more cv-qualified than “*cv1* `T`”.
 
 In this case however, `char*` is less cv-qualified than `const char *`, so the conversion is not allowed.
 
