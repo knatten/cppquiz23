@@ -12,4 +12,4 @@ In this case however, `char*` is less cv-qualified than `const char *`, so the c
 
 Note: While most compilers still allow `char const[]` to `char*` conversion with just a warning, this is not a legal conversion since C++11.
 
-See also <http://dev.krzaq.cc/stop-assigning-string-literals-to-char-star-already/>
+See also <https://dev.krzaq.cc/stop-assigning-string-literals-to-char-star-already/>
