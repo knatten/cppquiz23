@@ -1,7 +1,8 @@
-Since C++11, `std::vector` has a one parameter constructor ( + optional allocator). §[vector.cons]¶3 in the standard:
+Since C++11, `std::vector` has a one parameter constructor (+ optional allocator). §[vector.cons]¶4 in the standard:
 
-> `explicit vector(size_type n, const Allocator& = Allocator())`
-> Constructs a `vector` with `n` default-inserted elements using the specified allocator.
+> `constexpr explicit vector(size_type n, const Allocator& = Allocator());`
+>
+> *Effects*: Constructs a `vector` with `n` default-inserted elements using the specified allocator.
 
 Default-insertion uses value-initialization, which calls the `Foo` default constructor, resulting in the output `aaaaa`.
 
