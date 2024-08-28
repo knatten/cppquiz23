@@ -2,11 +2,11 @@
 
 void f(int a = []() { static int b = 1; return b++; }())
 {
-   std::cout << a;
+    std::cout << a;
 }
 
 int main()
 {
-   f();
-   f();
+    f();
+    f();
 }
