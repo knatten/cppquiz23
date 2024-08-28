@@ -1,32 +1,31 @@
 #include <iostream>
-using namespace std;
 
 class A
 {
 public:
-    A() { cout << "A"; }
-    A(const A &) { cout << "a"; }
+    A() { std::cout << "A"; }
+    A(const A &) { std::cout << "a"; }
 };
 
 class B: public virtual A
 {
 public:
-    B() { cout << "B"; }
-    B(const B &) { cout<< "b"; }
+    B() { std::cout << "B"; }
+    B(const B &) { std::cout << "b"; }
 };
 
 class C: public virtual A
 {
 public:
-    C() { cout<< "C"; }
-    C(const C &) { cout << "c"; }
+    C() { std::cout << "C"; }
+    C(const C &) { std::cout << "c"; }
 };
 
-class D:B,C
+class D: B, C
 {
 public:
-    D() { cout<< "D"; }
-    D(const D &) { cout << "d"; }
+    D() { std::cout << "D"; }
+    D(const D &) { std::cout << "d"; }
 };
 
 int main()

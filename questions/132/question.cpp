@@ -1,8 +1,7 @@
 #include <iostream>
-using namespace std;
 
 int foo() {
-  cout << 1;
+  std::cout << 1;
   return 1;
 }
 

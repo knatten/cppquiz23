@@ -1,11 +1,9 @@
 #include <iostream>
 #include <type_traits>
 
-using namespace std;
-
 template<typename T, typename U>
 void f(T, U) {
-    cout << is_same_v<T, U>;
+    std::cout << std::is_same_v<T, U>;
 }
 
 int main() {

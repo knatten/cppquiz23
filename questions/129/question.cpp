@@ -1,9 +1,7 @@
 #include <vector>
 #include <iostream>
 
-using namespace std;
-
 int main() {
-  vector<char> delimiters = { ",", ";" };  
-  cout << delimiters[0];
+  std::vector<char> delimiters = { ",", ";" };  
+  std::cout << delimiters[0];
 }
