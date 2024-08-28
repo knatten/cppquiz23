@@ -26,4 +26,4 @@ Now, why is `int x;` a definition, and not an `extern` declaration? The standard
 >
 >— end example ]"
 
-Note: This question is identical to [#191](http://cppquiz.org/quiz/question/191) except for the `{}` surrounding `int x;`. How does this affect the outcome?
+Note: This question is identical to [#191](https://cppquiz.org/quiz/question/191) except for the `{}` surrounding `int x;`. How does this affect the outcome?

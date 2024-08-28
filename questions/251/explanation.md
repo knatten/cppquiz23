@@ -12,4 +12,4 @@ Now we know that the function template `void f(T*)` is selected by overload reso
 
 So the explicit specialization `void f<>(int*)` is a specialization of `void f(T)`, since that's the only function template declaration that precedes it. Overload resolution however selected the other function template, `void f(T*)`, and we instead call an implicitly instantiated specialization of that, printing `3`.
 
-*Note: This example is taken from [Why Not Specialize Function Templates?](https://web.archive.org/web/20240427164422/http://www.gotw.ca/publications/mill17.htm) by Herb Sutter.*
+*Note: This example is taken from [Why Not Specialize Function Templates?](https://web.archive.org/web/20240427164422/https://www.gotw.ca/publications/mill17.htm) by Herb Sutter.*

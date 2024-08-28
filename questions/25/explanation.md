@@ -6,4 +6,4 @@ Most implementations will just wrap around, so if you try it out on your machine
 std::cout << std::numeric_limits<int>::min();
 ```
 
-Relying on such undefined behaviour is however *not* safe. For an interesting example, see <http://stackoverflow.com/questions/7682477/why-does-integer-overflow-on-x86-with-gcc-cause-an-infinite-loop>
+Relying on such undefined behaviour is however *not* safe. For an interesting example, see <https://stackoverflow.com/questions/7682477/why-does-integer-overflow-on-x86-with-gcc-cause-an-infinite-loop>

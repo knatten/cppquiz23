@@ -4,6 +4,6 @@ This could be interpreted as a variable definition (which was the intention of t
 
 The compiler is required by the standard to choose the second interpretation, which means that `y.f()` does not compile (since `y` is now a function, not an object of type `Y`).
 
-Wikipedia has a concise explanation: <http://en.wikipedia.org/wiki/Most_vexing_parse>, and the standard has more in §[stmt.ambig].
+Wikipedia has a concise explanation: <https://en.wikipedia.org/wiki/Most_vexing_parse>, and the standard has more in §[stmt.ambig].
 
 To fix the problem, change `Y y(X())` to either `Y y{X{}}` (modern C++) or `Y y((X()))` (pre-C++11)
