@@ -1,7 +1,9 @@
 C++ provides alternative tokens for some punctuators. The two weird lines are exactly equivalent to 
 
-    int a[] = {1};
-    std::cout << a[0];
+```
+int a[] = {1};
+std::cout << a[0];
+```
 
 §[lex.digraph]¶1 in the C++ standard explains this:
 

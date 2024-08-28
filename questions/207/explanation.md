@@ -2,13 +2,17 @@ The `[]` operator inserts an element if the key is not present. For a simple `in
 
 According to §[map.access]¶2 in the standard:
 
-> `T& operator[](key_type&& x);`
+> ```
+> T& operator[](key_type&& x);
+> ```
 >
 > Effects: Equivalent to: `return try_emplace(move(x)).first->second;`
 
 where `try_emplace` is defined by §[map.modifiers]¶4:
 
-> `template <class... Args> pair<iterator, bool> try_emplace(const key_type& k, Args&&... args);`
+> ```
+> template <class... Args> pair<iterator, bool> try_emplace(const key_type& k, Args&&... args);
+> ```
 >
 > Effects: If the map already contains an element whose key is equivalent to `k`, there is no effect. Otherwise inserts an object of type value_type constructed with `piecewise_construct, forward_as_tuple(k), forward_as_tuple(std::forward<Args>(args)...)`.
 

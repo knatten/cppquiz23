@@ -28,8 +28,10 @@ In both cases, `t` itself is an lvalue, so without the call to `std::forward`, `
 
 §[forward]¶3 explains what `std::forward` does:
 
->     template<class T> constexpr T&& forward(remove_reference_t<T>& t) noexcept;
->     template<class T> constexpr T&& forward(remove_reference_t<T>&& t) noexcept;
+> ```
+> template<class T> constexpr T&& forward(remove_reference_t<T>& t) noexcept;
+> template<class T> constexpr T&& forward(remove_reference_t<T>&& t) noexcept;
+> ```
 >
 > *Mandates*: For the second overload, `is_lvalue_reference_v<T>` is `false`.
 >

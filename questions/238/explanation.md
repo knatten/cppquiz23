@@ -7,7 +7,10 @@ Starting from the right:
 
 Then comes `operator!`. We have an array of _n_ `const char`, but  this operator only exists for `bool`: §[over.built]¶23:
 > There also exist candidate operator functions of the form
->     `bool    operator!(bool);`
+>
+> ```
+> bool    operator!(bool);
+> ```
 
 But, we can implicitly convert the operand of `operator!`! §[expr.unary.op]¶9: 
 > The operand of the logical negation operator ! is contextually converted to `bool`; its value is `true` if the converted operand is `false` and `false` otherwise. The type of the result is `bool`.
@@ -41,7 +44,10 @@ Negating this twice with two `operator!`s is trivial, we end up back at `true`.
 
 Finally, `true` is passed to `operator+`. This operator only exists for floating-point and promoted integral types (which `bool` is not): §[over.built]¶7:
 > For every cv-unqualified floating-point or promoted integral type `T`, there exist candidate operator functions of the form
-> `T operator+(T );`
+>
+> ```
+> T operator+(T);
+> ```
 
 So we need to promote the `bool` `true`. §[conv.prom]¶6:
 > A prvalue of type `bool` can be converted to a prvalue of type `int`, with `false` becoming zero and `true` becoming one. 

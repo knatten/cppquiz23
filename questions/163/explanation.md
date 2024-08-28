@@ -9,10 +9,10 @@ Placeholder type deduction works as per §[dcl.type.auto.deduct]¶4 :
 
 So the rules for `auto bar = a.getFoo();` are the same as if we did
 
-
-    template<typename T> void f(T t);
-    f(a.getFoo());
-
+```
+template<typename T> void f(T t);
+f(a.getFoo());
+```
 
 Let's have a look at §[temp.deduct.call]¶4:
 > In general, the deduction process attempts to find template argument values that will make the deduced `A` identical to `A`" (where `A` is the type of the argument of the call.)

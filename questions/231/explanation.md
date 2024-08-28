@@ -8,9 +8,11 @@ Can you use `override` as a type name, or is it a reserved keyword?
 
 If we replace the type name `override` with `type`, the definition of `Derived::f` becomes easier to read:
 
-    virtual auto f() -> type override{
-        std::cout << "1";
-        return type();
-    }
+```
+virtual auto f() -> type override{
+    std::cout << "1";
+    return type();
+}
+```
 
 In `main`, we create an object of type `Derived`, call `f()` on it, and `1` is printed.

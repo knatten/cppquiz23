@@ -15,7 +15,9 @@ This problem does however not result in a compiler error, since the compiler is 
 
 Going back to §[vector.overview], we find this candidate:
 
-`template <class InputIterator> vector(InputIterator first, InputIterator last)`
+```
+template <class InputIterator> vector(InputIterator first, InputIterator last)
+```
 
 Note that the type of `InputIterator` has no link to the type of `T` in the `vector<T>`. So even if we are initializing a `vector<char>`, the two arguments can be of arbitrary type. The only requirement is that they confirm to the concept of `InputIterator`, which `const char[]` happens to do.
 

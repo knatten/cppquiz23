@@ -2,7 +2,9 @@ You can only get a future from a promise once. Trying to get it again throws `fu
 
 §[futures.promise]¶15:
 
-> `future<R> get_future();`
+> ```
+> future<R> get_future();
+> ```
 >
 > *Throws*: `future_error` if `*this` has no shared state or if `get_future` has already been called on a promise with the same shared state as `*this`.
 

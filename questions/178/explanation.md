@@ -1,6 +1,8 @@
 Some might expect the lexer to parse the series of characters `a+++++b` as follows:
 
-    a++ + ++b
+```
+a++ + ++b
+```
 
 but according to the [maximal munch principle](https://en.wikipedia.org/wiki/Maximal_munch), the lexer will take the longest sequence of characters to produce the next token(with a few exceptions).
 

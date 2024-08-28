@@ -1,12 +1,16 @@
 First, the line
 
-    Y y1;
+```
+Y y1;
+```
 
 creates an instance of `Y`. `Y` has an `X` data member, which is default constructed, printing `1`.
 
 Then,
 
-    Y y2 = std::move(y1);
+```
+Y y2 = std::move(y1);
+```
 
 copy-initializes another `Y`. The `std::move` turns `y1` into an rvalue, but since `Y` has no move constructor, its copy constructor is called. The implicitly-defined copy-constructor performs a copy of `x`, as specified in §[class.copy.ctor]¶14:
 > The implicitly-defined copy/move constructor for a non-union class X performs a memberwise copy/move of its bases and members.

@@ -1,7 +1,9 @@
 To answer this we need to look at overload resolution of vector's constructors:
 
 §[vector.cons]¶6 says (somewhat redacted):
-`vector(size_type n, const T& value);`
+```
+vector(size_type n, const T& value);
+```
 Effects: Constructs a `vector` with `n` copies of `value`, using the specified allocator
 
 So `v1` contains one "`2`".

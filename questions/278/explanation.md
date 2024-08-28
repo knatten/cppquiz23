@@ -4,8 +4,10 @@
 
 > (...)
 >
->     template<class T, class... Types>
->       constexpr const T& get(const tuple<Types...>& t) noexcept;
+> ```
+> template<class T, class... Types>
+>   constexpr const T& get(const tuple<Types...>& t) noexcept;
+> ```
 >
 > (...)
 >

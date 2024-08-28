@@ -4,9 +4,11 @@ More details:
 
 First, we call `get` for the first time. §[futures.unique.future]¶16:
 
->     R future::get();
->     R& future<R&>::get();
->     void future<void>::get();
+> ```
+> R future::get();
+> R& future<R&>::get();
+> void future<void>::get();
+> ```
 >
 > *Effects*:
 >
@@ -32,7 +34,9 @@ Then we try to call `get` again, but §[futures.unique.future]¶3 says:
 
 So if `valid() == false`, calling `get` a second time is UB (but an exception is usually thrown). What does `valid()` do? §[futures.unique.future]¶20:
 
-> `bool valid() const noexcept;`
+> ```
+> bool valid() const noexcept;
+> ```
 >
 > *Returns*: `true` only if `*this` refers to a shared state.
 

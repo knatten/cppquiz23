@@ -9,12 +9,18 @@ Now what happens if you define a `variant` without initializing it with a certai
 
 §[variant.ctor]¶3:
 
-> `constexpr variant() noexcept`
+> ```
+> constexpr variant() noexcept(see below);
+> ```
+>
 > Constructs a `variant` holding a value-initialized value of type `T`<sub>0</sub> 
 
 Finally, we call `index()` and print the result. `index()` returns the index of the type of the contained value. The contained value is an `int`, aka `T`<sub>0</sub>, so `0` is returned.
 
 §[variant.status]¶3:
 
-> `constexpr size_t index() const noexcept;`
+> ```
+> constexpr size_t index() const noexcept;
+> ```
+> 
 > _Effects+: If [it doesn't contain a value], returns `variant_npos`. Otherwise, returns the zero- based index of the alternative of the contained value.

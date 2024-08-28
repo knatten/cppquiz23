@@ -2,15 +2,19 @@
 
 §[futures.unique.future]¶21:
 
-> `void wait() const;`
+> ```
+> void wait() const;
+> ```
 >
 > *Effects*: Blocks until the shared state is ready.
 
 To get at the exception, you have to use `get`. §[futures.unique.future]¶19:
 
->     R future::get();
->     R& future<R&>::get();
->     void future<void>::get();
+> ```
+> R future::get();
+> R& future<R&>::get();
+> void future<void>::get();
+> ```
 >
 > *Throws*: the stored exception, if an exception was stored in the shared state.
 

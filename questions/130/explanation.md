@@ -4,11 +4,13 @@
 
 The first call to `adl` is a non-dependent call, so it is looked up as if at the definition of the function template. The resolution of the second call is deferred until the template is instantiated because it depends on a template parameter.
 
-    template<typename T> void call_adl_function(T t)
-    {
-        adl(S()); // Independent, looks up adl now.
-        adl(t); // Dependent, looks up adl later.
-    }
+```
+template<typename T> void call_adl_function(T t)
+{
+    adl(S()); // Independent, looks up adl now.
+    adl(t); // Dependent, looks up adl later.
+}
+```
 
 When `adl` is being looked up as if at the definition of the function template, the only version of `adl` that exists is the templated `adl(T)`. Specifically, `adl(S)` does not exist yet, and is not a candidate. 
 

@@ -2,7 +2,9 @@ The `std::exit` function calls the destructors of all objects with static storag
 
 §[support.start.term]¶9.1:
 
-> `[[noreturn]] void exit(int status);`
+> ```
+> [[noreturn]] void exit(int status);
+> ```
 >
 > *Effects*:
 >

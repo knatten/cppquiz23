@@ -6,7 +6,9 @@ What does the `std::variant` default constructor do? Which of the types does it 
 
 > In the descriptions that follow, let *i* be in the range `[0, sizeof...(Types))`, and T<sub>*i*</sub> be the *i*<sup>th</sup> type in `Types`.
 >
-> `constexpr variant() noexcept(see below);`
+> ```
+> constexpr variant() noexcept(see below);
+> ```
 >
 > (...)
 >

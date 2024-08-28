@@ -1,6 +1,8 @@
 Since C++11, `std::vector` has a one parameter constructor (+ optional allocator). §[vector.cons]¶4 in the standard:
 
-> `constexpr explicit vector(size_type n, const Allocator& = Allocator());`
+> ```
+> constexpr explicit vector(size_type n, const Allocator& = Allocator());
+> ```
 >
 > *Effects*: Constructs a `vector` with `n` default-inserted elements using the specified allocator.
 
