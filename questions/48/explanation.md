@@ -5,9 +5,9 @@ This means that the first async call is guaranteed to finish execution before `a
 Elaboration on synchronization:
 According to §[futures.async]¶4 of the standard:
 "Synchronization: The invocation of async synchronizes with the invocation of f. The completion of the function f is sequenced before the shared state is made ready.
-[Note 1: These apply regardless of the provided policy argument. [...]]
+[Note 1: These apply regardless of the provided policy argument. (...)]
 If the implementation chooses the launch::async policy,
-[...]
+(...)
 — the associated thread completion synchronizes with the return from the first function that successfully detects the ready status of the shared state or with the return from the last function that releases the shared state, whichever happens first."
 
 In this case, the destructor of `std::future<>` returned by the `async()` call is "the last function that releases the shared state", therefore it synchronizes with (waits for) the thread completion.

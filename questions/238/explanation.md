@@ -3,9 +3,9 @@ Starting from the right, `""` is a string literal, which gets converted to a poi
 #### Detailed explanation:
 
 Starting from the right:
-`""` is a string literal. The table in §[lex.string]¶1 specifies the type of a narrow string literal to have type “array of _n_ `const char`”
+`""` is a string literal. The table in §[lex.string]¶1 specifies the type of a narrow string literal to have type “array of *n* `const char`”
 
-Then comes `operator!`. We have an array of _n_ `const char`, but  this operator only exists for `bool`: §[over.built]¶23:
+Then comes `operator!`. We have an array of *n* `const char`, but  this operator only exists for `bool`: §[over.built]¶23:
 > There also exist candidate operator functions of the form
 >
 > ```
@@ -18,7 +18,7 @@ But, we can implicitly convert the operand of `operator!`! §[expr.unary.op]¶9:
 In this case we need a standard conversion sequence. 
 
 §[conv.general]¶1:
-> A _standard conversion sequence_ is a sequence of standard conversions in the following order:
+> A *standard conversion sequence* is a sequence of standard conversions in the following order:
 >
 > (1.1) — Zero or one conversion from the following set: lvalue-to-rvalue conversion, array-to-pointer conversion, and function-to-pointer conversion.
 >
@@ -28,7 +28,7 @@ In this case we need a standard conversion sequence.
 >
 > A standard conversion sequence will be applied to an expression if necessary to convert it to a required destination type.
 
-So we can first use an array-to-pointer conversion (1.1) to get from "array of _n_ `const char`" to a pointer. We can then use a boolean conversion (1.2) to get from pointer to `bool`.
+So we can first use an array-to-pointer conversion (1.1) to get from "array of *n* `const char`" to a pointer. We can then use a boolean conversion (1.2) to get from pointer to `bool`.
 
 First, the array-to-pointer conversion, §[conv.array]¶1:
 > An lvalue or rvalue of type “array of N T” (...) can be converted to a prvalue of type “pointer to T”. (...) The result is a pointer to the first element of the array.
