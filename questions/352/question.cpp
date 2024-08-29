@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-typedef std::vector<int> TVint; 
+typedef std::vector<int> TVint;
 
 int main() {
     TVint t(1);

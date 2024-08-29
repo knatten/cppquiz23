@@ -2,7 +2,7 @@ This is taken from an example in §[except.ctor]¶2 in the standard about stack 
 
 > Each object with automatic storage duration is destroyed if it has been constructed, but not yet destroyed, since the try block was entered. If an exception is thrown during the destruction of temporaries or local variables for a `return` statement (§[stmt.return]), the destructor for the returned object (if any) is also invoked. The objects are destroyed in the reverse order of the completion of their construction.
 >
-> [*Example 1*: 
+> [*Example 1*:
 >
 > ```
 > struct A { };

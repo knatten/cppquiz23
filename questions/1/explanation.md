@@ -4,12 +4,12 @@ Overload resolution when function templates are involved works like this (summar
 - Do type deduction (or check explicit template arguments) for all function templates
 - Add all function templates where this succeeded to the set of candidate functions
 - Add all non-template functions of the same name to the set of candidate functions (there are none in this question)
-- Do overload resolution on the candidates and pick the best viable function 
+- Do overload resolution on the candidates and pick the best viable function
 
 We start with type deduction:
 
 - For the primary template, `T` is deduced from the call `f(i)` as `int`, and the parameter type is `int &`.
-- For the explicit specialization, the parameter type is `const int&`. 
+- For the explicit specialization, the parameter type is `const int&`.
 
 Overload resolution now has to find a conversion sequence from the argument `i` to each of the parameter types `int &` and `const int &`, and if one conversion sequence is better, that's the one that's chosen. If neither is better than the other, the call is ill-formed.
 

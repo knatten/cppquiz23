@@ -3,7 +3,7 @@
 §[dcl.init.aggr]¶3:
 
 > When an aggregate is initialized by an initializer list as specified in §[dcl.init.list], the elements of the initializer list are taken as initializers for the elements of the aggregate.
- 
+
 And §[dcl.init.aggr]¶4:
 
 > For each explicitly initialized element (...) [if] a narrowing conversion §[dcl.init.list] is required to convert the expression, the program is ill-formed.

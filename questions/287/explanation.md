@@ -19,7 +19,7 @@ On the other hand, in the constructor that takes `basic_string` (the `s2` case) 
 > (...)
 >
 > Let
-> 
+>
 > — `s` be the value of `str` prior to this call and
 >
 > — `rlen` be `pos + min(n, s.size() - pos)` for the overloads with parameter `n`, and `s.size()` otherwise.

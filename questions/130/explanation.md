@@ -12,6 +12,6 @@ template<typename T> void call_adl_function(T t)
 }
 ```
 
-When `adl` is being looked up as if at the definition of the function template, the only version of `adl` that exists is the templated `adl(T)`. Specifically, `adl(S)` does not exist yet, and is not a candidate. 
+When `adl` is being looked up as if at the definition of the function template, the only version of `adl` that exists is the templated `adl(T)`. Specifically, `adl(S)` does not exist yet, and is not a candidate.
 
 Note: At the time of writing, this program does not confirm to the standard in some recent versions of Visual Studio's C++ compiler.

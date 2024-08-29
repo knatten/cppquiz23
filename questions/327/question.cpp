@@ -2,7 +2,7 @@
 #include <memory>
 
 struct S {
-    S(int i) : i_(i){} 
+    S(int i) : i_(i){}
     S* operator&() const;
     int i_;
 };

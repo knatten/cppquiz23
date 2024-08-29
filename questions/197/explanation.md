@@ -17,7 +17,7 @@ And §[basic.lookup.general]¶2 says:
 
 > A program point *P* is said to follow any declaration in the same translation unit whose locus is before *P*.
 
-The locus of the local `j` is *after* the program point *P* where the reference `i` is bound, so *P* does not follow the declaration of the local `j`. 
+The locus of the local `j` is *after* the program point *P* where the reference `i` is bound, so *P* does not follow the declaration of the local `j`.
 
 This means that name lookup for `j` in the expression `int& i = j` does not find the local `j`, but rather the global `j`, and `i` is bound to the global `j`.
 

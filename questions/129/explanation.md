@@ -1,4 +1,4 @@
-Here we are trying to initialize a `vector<char>` using two string literals, not two `char`s. 
+Here we are trying to initialize a `vector<char>` using two string literals, not two `char`s.
 
 The initializer-list constructor for `template <class T>vector` is defined as `vector(initializer_list<T>)` by §[vector.overview] in the standard. In our case, `vector(initializer_list<char>)`.
 

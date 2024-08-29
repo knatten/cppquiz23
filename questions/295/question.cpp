@@ -11,7 +11,7 @@ struct a_string {
 void print(const char* s) { std::cout << s; }
 a_string make_string() { return a_string{}; }
 
-int main() {   
+int main() {
     a_string s1 = make_string();
     print(s1.c_str());
 

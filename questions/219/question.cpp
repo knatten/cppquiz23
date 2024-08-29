@@ -2,11 +2,11 @@
 
 template<typename T>
 T sum(T arg) {
-    return arg;   
+    return arg;
 }
 
 template<typename T, typename ...Args>
-T sum(T arg, Args... args) {    
+T sum(T arg, Args... args) {
     return arg + sum<T>(args...);
 }
 

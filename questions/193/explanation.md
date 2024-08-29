@@ -1,4 +1,4 @@
-C++ provides alternative tokens for some punctuators. The two weird lines are exactly equivalent to 
+C++ provides alternative tokens for some punctuators. The two weird lines are exactly equivalent to
 
 ```
 int a[] = {1};

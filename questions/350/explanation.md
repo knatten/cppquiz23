@@ -17,7 +17,7 @@ class function<R(ArgTypes...)> {
 ```
 
 `takeFunc` explicitly specializes what kind of `std::function` it accepts (rather than e.g. being a function template that deduces it from the lambda we pass to it). It explicitly sets the return type `R` to `void`, and the template parameter pack `ArgTypes...` to `Q`. That means that the signature of `operator()` is `void operator()(Q) const`; taking `Q` by value.
- 
+
 §[func.wrap.func.inv]¶1 continues:
 
 > ```

@@ -12,10 +12,10 @@ Then comes `operator!`. We have an array of *n* `const char`, but  this operator
 > bool    operator!(bool);
 > ```
 
-But, we can implicitly convert the operand of `operator!`! §[expr.unary.op]¶9: 
+But, we can implicitly convert the operand of `operator!`! §[expr.unary.op]¶9:
 > The operand of the logical negation operator ! is contextually converted to `bool`; its value is `true` if the converted operand is `false` and `false` otherwise. The type of the result is `bool`.
 
-In this case we need a standard conversion sequence. 
+In this case we need a standard conversion sequence.
 
 §[conv.general]¶1:
 > A *standard conversion sequence* is a sequence of standard conversions in the following order:
@@ -50,6 +50,6 @@ Finally, `true` is passed to `operator+`. This operator only exists for floating
 > ```
 
 So we need to promote the `bool` `true`. §[conv.prom]¶6:
-> A prvalue of type `bool` can be converted to a prvalue of type `int`, with `false` becoming zero and `true` becoming one. 
+> A prvalue of type `bool` can be converted to a prvalue of type `int`, with `false` becoming zero and `true` becoming one.
 
 So the `bool` `true` becomes the `int` `1`, which is printed.

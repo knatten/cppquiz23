@@ -9,7 +9,7 @@ The grammar for `sizeof` is in §[expr.unary.general]¶1:
 > sizeof ... ( identifier )
 > ...
 
-We have three cases and the one that applies here is **sizeof unary-expression**. The *unary expression* is `(0)["abcdefghij"]`, which looks odd but is just array indexing of *string literal* which is a *const char array*. 
+We have three cases and the one that applies here is **sizeof unary-expression**. The *unary expression* is `(0)["abcdefghij"]`, which looks odd but is just array indexing of *string literal* which is a *const char array*.
 
 We can see that `(0)["abcdefghij"]` is identical to `("abcdefghij")[0]` from §[expr.sub]¶2 which says:
 

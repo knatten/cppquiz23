@@ -10,6 +10,6 @@ template<class T>
 void f(T*) { std::cout << 3; }
 
 int main() {
-    int *p = nullptr; 
+    int *p = nullptr;
     f( p );
 }

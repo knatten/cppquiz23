@@ -13,8 +13,8 @@ struct S {
   std::unique_ptr<C> u;
   C *const p;
 
-  S() 
-    : v(1) 
+  S()
+    : v(1)
     , u(new C())
     , p(u.get())
   {}
@@ -23,7 +23,7 @@ struct S {
 int main() {
   S s;
   const S &r = s;
- 
+
   s.v[0].foo();
   s.u->foo();
   s.p->foo();

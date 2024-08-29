@@ -9,7 +9,7 @@ void f(T, U) {
 int main() {
     int i = 0;
     double d = 0.0;
-    f(i, d); 
-    f<int>(i, d); 
-    f<double>(i, d); 
+    f(i, d);
+    f<int>(i, d);
+    f<double>(i, d);
 }

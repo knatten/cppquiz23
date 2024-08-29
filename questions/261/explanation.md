@@ -43,21 +43,21 @@ So we get out a copy of that, and `a` is printed. (Note that `str()` does not mo
 Then we stream "b" into the `basic_stringstream`. This operation is defined in terms of some of the `basic_stringstream` base classes, so here's (parts of) its inheritance diagram, for reference:
 
 ```
-           --------- 
+           ---------
           |basic_ios|
-           --------- 
+           ---------
           /         \
  -------------   -------------
 |basic_istream| |basic_ostream|
  -------------   -------------
            \       /
-         -------------- 
+         --------------
         |basic_iostream|
-         -------------- 
+         --------------
                |
-        ------------------ 
+        ------------------
        |basic_stringstream|
-        ------------------ 
+        ------------------
 ```
 
 `basic_stringstream` inherits `operator<<` from `ostream`, which according to §[ostream]¶2:

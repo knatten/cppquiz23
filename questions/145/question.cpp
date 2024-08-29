@@ -8,7 +8,7 @@ struct E
 };
 
 E f()
-{ 
+{
   return E();
 }
 
