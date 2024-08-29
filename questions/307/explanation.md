@@ -1,21 +1,17 @@
+According to the [dcl.fct.def.delete]¶2:
+
+> A program that refers to a deleted function implicitly or explicitly, other than to declare it, is ill-formed.
+
+Does `S{}` refer to the deleted constructor? That depends on whether this is value-initialization or aggregate initialization. In the case of value-initialization, the constructor will be called, but in the case of aggregate initialization, no constructor is called.
+
 The rules for whether a struct is an aggregate are quite complex §[dcl.init.aggr]¶1:
 
-> An aggregate is an array or a class with no user-provided, explicit, or inherited constructors, no private or protected non-static data members, no virtual functions, and no virtual, private, or protected base classes.
+> An *aggregate* is an array or a class with
+> - no user-declared or inherited constructors,
+> - no private or protected direct non-static data members,
+> - no private or protected direct base classes, and
+> - no virtual functions  or virtual base classes.
 
-Here, the `S` default constructor is considered user-declared, but not user-provided. §[dcl.fct.def.default]¶5:
+Here, the `S` default constructor is considered user-declared, so `S` isn't an aggregate, and `S{}` is using value initialization, and the program is ill-formed.
 
-> A function is user-provided if it is user-declared and not explicitly defaulted or deleted on its first declaration. 
-
-So `S` is considered an aggregate, and `S{}` is using aggregate initialization, which does not call any constructor.
-
-The initialization list `{}` in `auto s = S{};` has no elements though, so the value of `x` is not specified. In this case, `x` will be copy-initialized from an empty initializer list. §[sdcl.init.aggr]¶8:
-
-> If there are fewer initializer-clauses in the list than there are elements in a non-union aggregate, then each element not explicitly initialized is initialized as follows: (...) the element is copy-initialized from an empty initializer list.
-
-And initializing from an empty initializer list results in value-initialization §[dcl.init.list]¶3.10:
-
-> Otherwise, if the initializer list has no elements, the object is value-initialized.
-
-And value-initializing an `int` sets it to zero.
-
-Note that this behavior is changed in C++20 (P1008R1), where `S` is not an aggregate because it has a user-declared constructor, and so this code would be a guaranteed compile error.
+Note that this behavior changed in C++20 ([P1008](https://wg21.link/p1008)). Previously, a constructor that was only user-declared but not user-provided did not prevent a class from being an aggregate. So prior to C++20, this question did actually compile.
