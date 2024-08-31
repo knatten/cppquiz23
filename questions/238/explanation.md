@@ -1,11 +1,11 @@
-Starting from the right, `""` is a string literal, which gets converted to a pointer, which gets converted to a `bool` with the value `true`. This then gets passed to two `operator!`s, which flip it to `false` and back to `true` again. Finally, `operator+` converts the `bool` `true` to the `int`  `1`, which gets printed.
+Starting from the right, `""` is a string literal, which gets converted to a pointer, which gets converted to a `bool` with the value `true`. This then gets passed to two `operator!`s, which flip it to `false` and back to `true` again. Finally, `operator+` converts the `bool` `true` to the `int` `1`, which gets printed.
 
 #### Detailed explanation:
 
 Starting from the right:
 `""` is a string literal. The table in §[lex.string]¶1 specifies the type of a narrow string literal to have type “array of *n* `const char`”
 
-Then comes `operator!`. We have an array of *n* `const char`, but  this operator only exists for `bool`: §[over.built]¶23:
+Then comes `operator!`. We have an array of *n* `const char`, but this operator only exists for `bool`: §[over.built]¶23:
 > There also exist candidate operator functions of the form
 >
 > ```

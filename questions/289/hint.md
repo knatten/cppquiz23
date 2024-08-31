@@ -1,1 +1,1 @@
-The lambda expression results in  a single type with a member function `operator()` which has a static local variable `static int b`.
+The lambda expression results in a single type with a member function `operator()` which has a static local variable `static int b`.

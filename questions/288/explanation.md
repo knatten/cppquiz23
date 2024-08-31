@@ -1,4 +1,4 @@
-The question is which of `I`, `J`, and `K` get incremented. This depends both on operator precedence, evaluation order and short-circuiting. All of these are defined in  §[expr.log.or].
+The question is which of `I`, `J`, and `K` get incremented. This depends both on operator precedence, evaluation order and short-circuiting. All of these are defined in §[expr.log.or].
 
 First, precedence. Operator precedence is not actually spelled out anywhere, but you can infer from the syntax below that `&&` (*logical-and-expression*) has higher precedence than `||` (*logical-or-expression*).
 

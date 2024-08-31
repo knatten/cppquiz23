@@ -16,12 +16,12 @@ Now, why is `int x;` a definition, and not an `extern` declaration? The standard
 >[Example 5:
 >
 > ```
->   (...)
->   extern "C" int i;                   // declaration
->   extern "C" {
->     int i;                            // definition
->   }
->   (...)
+> (...)
+> extern "C" int i;                   // declaration
+> extern "C" {
+>   int i;                            // definition
+> }
+> (...)
 > ```
 >
 >— end example ]"

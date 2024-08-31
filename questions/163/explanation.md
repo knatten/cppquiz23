@@ -5,7 +5,7 @@ According to §[dcl.spec.auto]¶7 (`auto` specifier) in the standard:
 
 Placeholder type deduction works as per §[dcl.type.auto.deduct]¶4 :
 
-> If the placeholder-type-specifier is of the form type-constraint<sub>opt</sub> auto, the deduced type `T′` replacing `T` is determined using the rules for template argument deduction.  (...) Deduce a value for `U` [the template parameter for the invented function] using the rules of template argument deduction from a function call (13.10.3.2) (...).
+> If the placeholder-type-specifier is of the form type-constraint<sub>opt</sub> auto, the deduced type `T′` replacing `T` is determined using the rules for template argument deduction. (...) Deduce a value for `U` [the template parameter for the invented function] using the rules of template argument deduction from a function call (13.10.3.2) (...).
 
 So the rules for `auto bar = a.getFoo();` are the same as if we did
 

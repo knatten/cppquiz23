@@ -9,7 +9,7 @@ but according to the [maximal munch principle](https://en.wikipedia.org/wiki/Max
 §[lex.pptoken]¶3.3 in the standard:
 > the next preprocessing token is the longest sequence of characters that could constitute a preprocessing token, even if that would cause further lexical analysis to fail (...).
 
-So after parsing `a++`, it is not allowed to just parse `+`, it has to parse `++`. The  sequence is thus parsed as:
+So after parsing `a++`, it is not allowed to just parse `+`, it has to parse `++`. The sequence is thus parsed as:
 
 ```
 a ++ ++ + b

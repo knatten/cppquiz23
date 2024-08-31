@@ -40,4 +40,4 @@ So if `valid() == false`, calling `get` a second time is UB (but an exception is
 >
 > *Returns*: `true` only if `*this` refers to a shared state.
 
-The first time we called `get`, we gave up our reference to the shared state, and from then on `*this` no longer refers to a shared state, `valid()`  now returns `false`, and calling `get` again is UB.
+The first time we called `get`, we gave up our reference to the shared state, and from then on `*this` no longer refers to a shared state, `valid()` now returns `false`, and calling `get` again is UB.

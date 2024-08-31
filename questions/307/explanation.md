@@ -10,7 +10,7 @@ The rules for whether a struct is an aggregate are quite complex §[dcl.init.agg
 > - no user-declared or inherited constructors,
 > - no private or protected direct non-static data members,
 > - no private or protected direct base classes, and
-> - no virtual functions  or virtual base classes.
+> - no virtual functions or virtual base classes.
 
 Here, the `S` default constructor is considered user-declared, so `S` isn't an aggregate, and `S{}` is using value initialization, and the program is ill-formed.
 
