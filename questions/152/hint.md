@@ -1,1 +1,1 @@
-No hint
+The answer is different for the case of `int` and `signed int`.
