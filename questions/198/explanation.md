@@ -13,7 +13,7 @@ Now, why is `int x;` a definition, and not an `extern` declaration? The standard
 
 > A declaration directly contained in a linkage-specification is treated as if it contains the extern specifier for the purpose of determining the linkage of the declared name and whether it is a definition. (...)
 >
->[Example 5:
+> [Example 5:
 >
 > ```
 > (...)
@@ -24,6 +24,6 @@ Now, why is `int x;` a definition, and not an `extern` declaration? The standard
 > (...)
 > ```
 >
->— end example ]"
+> — end example ]"
 
 Note: This question is identical to [#191](https://cppquiz.org/quiz/question/191) except for the `{}` surrounding `int x;`. How does this affect the outcome?
