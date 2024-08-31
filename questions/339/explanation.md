@@ -30,7 +30,7 @@ Then we try to call `get` again, but §[futures.unique.future]¶3 says:
 >
 > (...)
 >
-> *Recommended practice*: Implementations should detect this case and throw an object of type `future_error` with an error condition of `future_errc​::​no_state`.
+> *Recommended practice*: Implementations should detect this case and throw an object of type `future_error` with an error condition of `future_errc::no_state`.
 
 So if `valid() == false`, calling `get` a second time is UB (but an exception is usually thrown). What does `valid()` do? §[futures.unique.future]¶20:
 

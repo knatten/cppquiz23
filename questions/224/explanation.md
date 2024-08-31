@@ -6,7 +6,7 @@ Providing a definition for a pure virtual function is valid, as long as it is no
 
 This implicitly says that a pure virtual function can in fact be defined. Furthermore:
 
-> [*Note 4*: A function declaration cannot provide both a *pure-specifier* and a definition. — *end note*]
+> [*Note 4*: A function declaration cannot provide both a *pure-specifier* and a definition. — *end note*]
 
 Which is why we have to define it outside the declaration [1]. Now to the output of the program:
 

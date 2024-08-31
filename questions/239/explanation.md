@@ -4,6 +4,6 @@ How is the handler selected? §[except.handle]¶4:
 
 > The handlers for a try block are tried in order of appearance.
 >
-> [*Note 2*: This makes it possible to write handlers that can never be executed, for example by placing a handler for a final derived class after a handler for a corresponding unambiguous public base class. — *end note*]
+> [*Note 2*: This makes it possible to write handlers that can never be executed, for example by placing a handler for a final derived class after a handler for a corresponding unambiguous public base class. — *end note*]
 
 The note in the standard hints at what's happening here: Even if `out_of_range& e` is a more specific match, `exception& e` matches before we even get to try it, and `1` is printed.

@@ -12,4 +12,4 @@ In our case, both are standard conversion sequences with the same conversion ran
 
 [1] §[conv.ptr]¶1:
 
-> A *null pointer constant* is an integer literal (§[lex.icon]) with value zero or a prvalue of type `std​::​nullptr_t`. A null pointer constant can be converted to a pointer type (...).
+> A *null pointer constant* is an integer literal (§[lex.icon]) with value zero or a prvalue of type `std::nullptr_t`. A null pointer constant can be converted to a pointer type (...).

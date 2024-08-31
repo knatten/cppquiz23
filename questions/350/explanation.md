@@ -24,9 +24,9 @@ class function<R(ArgTypes...)> {
 > R operator()(ArgTypes... args) const;
 > ```
 >
-> *Returns*: `INVOKE<R>(f, std​::​forward<ArgTypes>(args)...)` (§[func.require]), where `f` is the target object (§[func.def]) of `*this`.
+> *Returns*: `INVOKE<R>(f, std::forward<ArgTypes>(args)...)` (§[func.require]), where `f` is the target object (§[func.def]) of `*this`.
 
-If we substitute the types in `INVOKE<R>(f, std​::​forward<ArgTypes>(args)...)`, we get `INVOKE<void>(f, std​::​forward<Q>(q))`, which just means `f(std::forward<Q>(q))`.
+If we substitute the types in `INVOKE<R>(f, std::forward<ArgTypes>(args)...)`, we get `INVOKE<void>(f, std::forward<Q>(q))`, which just means `f(std::forward<Q>(q))`.
 
 So when we call `qfunc(q)`, it passes `q` by value to `qfunc`. The `std::function::operator()` then wraps that copy in `std::forward<Q>`, turning it into an rvalue reference (§[forward]¶3), before passing it to the lambda. The `Q&&` parameter to our lambda can bind directly to this forwarded `q`, no move is necessary.
 

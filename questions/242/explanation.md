@@ -51,7 +51,7 @@ Reference collapsing explains how `int&&&` above collapsed to `int&`. The mechan
 
 > If a *typedef-name* (...) denotes a type `TR` that is a reference to a type `T`, an attempt to create the type “lvalue reference to *cv* `TR`” creates the type “lvalue reference to `T`”, while an attempt to create the type “rvalue reference to *cv* `TR`” creates the type `TR`.
 >
-> [*Note 3*: This rule is known as reference collapsing. — *end note*]
+> [*Note 3*: This rule is known as reference collapsing. — *end note*]
 
 But what does template parameters have to do with typedef-names? It turns out that template-parameters *are* typedef-names: §[temp.param]¶3:
 
