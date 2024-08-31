@@ -12,4 +12,4 @@ If the implementation chooses the launch::async policy,
 
 In this case, the destructor of `std::future<>` returned by the `async()` call is "the last function that releases the shared state", therefore it synchronizes with (waits for) the thread completion.
 
-Scott Meyers writes more about this <https://scottmeyers.blogspot.com/2013/03/stdfutures-from-stdasync-arent-special.html>
+Scott Meyers writes more about this <https://scottmeyers.blogspot.com/2013/03/stdfutures-from-stdasync-arent-special.html>.

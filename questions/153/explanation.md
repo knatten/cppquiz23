@@ -1,4 +1,4 @@
-According to §[tab:lex.string.literal] in the standard, an ordinary string literal has type “array of *n* `const char`”
+According to §[tab:lex.string.literal] in the standard, an ordinary string literal has type “array of *n* `const char`”.
 
 The array of *n* `const char` decays to a pointer to `const char`. That pointer to `const char` does not implicitly convert to a pointer to non-const `char`.
 
@@ -10,4 +10,4 @@ In this case however, `char*` is less cv-qualified than `const char *`, so the c
 
 Note: While most compilers still allow `char const[]` to `char*` conversion with just a warning, this is not a legal conversion since C++11.
 
-See also <https://dev.krzaq.cc/stop-assigning-string-literals-to-char-star-already/>
+See also <https://dev.krzaq.cc/stop-assigning-string-literals-to-char-star-already/>.

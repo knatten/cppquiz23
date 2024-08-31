@@ -1,6 +1,6 @@
 In `f()`, an `E` object is constructed, and `1` is printed. This object is then returned to `main()`, and one could expect the copy constructor to be called, printing `2`.
 
-However, `E()` is a prvalue and as such does not constitute an object just yet by §[basic.lval]¶1
+However, `E()` is a prvalue and as such does not constitute an object just yet by §[basic.lval]¶1:
 
 > A prvalue is an expression whose evaluation initializes an object or a bit-field, or computes the value of the operand of an operator, as specified by the context in which it appears.
 

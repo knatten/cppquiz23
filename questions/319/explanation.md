@@ -2,7 +2,7 @@ What is the return type of the lambda function `L`?
 
 It is inferred from the type of the operand of its return statement.
 
-So it's the type of the conditional operator `?:`, which is specified in §[expr.cond]¶4
+So it's the type of the conditional operator `?:`, which is specified in §[expr.cond]¶4:
 
 > Otherwise, if the second and third operand have different types and either has (possibly cv-qualified) class type, (...) an attempt is made to form an implicit conversion sequence from each of those operands to the type of the other.
 

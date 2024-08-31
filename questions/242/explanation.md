@@ -14,7 +14,7 @@ There is however this additional rule:
 
 > A *forwarding reference* is an rvalue reference to a cv-unqualified template parameter (...). If `P` is a forwarding reference and the argument is an lvalue, the type “lvalue reference to `A`” is used in place of `A` for type deduction.
 
-(cv-unqualified just means no `const` or `volatile`)
+(cv-unqualified just means no `const` or `volatile`.)
 
 `T&&` is indeed an rvalue reference to a cv-unqualified template parameter, so it is a forwarding reference.
 

@@ -1,10 +1,10 @@
 There are two alternatives for the call to `f` here, the primary function template, and the explicit specialization. So we need overload resolution to figure out which one to call.
 
 Overload resolution when function templates are involved works like this (summarized from §[temp.over]¶1):
-- Do type deduction (or check explicit template arguments) for all function templates
-- Add all function templates where this succeeded to the set of candidate functions
-- Add all non-template functions of the same name to the set of candidate functions (there are none in this question)
-- Do overload resolution on the candidates and pick the best viable function
+- Do type deduction (or check explicit template arguments) for all function templates.
+- Add all function templates where this succeeded to the set of candidate functions.
+- Add all non-template functions of the same name to the set of candidate functions (there are none in this question).
+- Do overload resolution on the candidates and pick the best viable function.
 
 We start with type deduction:
 
