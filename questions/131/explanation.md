@@ -2,13 +2,13 @@ These are two examples of initialization. The first form, `C c1(7)`, is called d
 
 §[over.match.ctor]¶1:
 
-> When objects of class type are direct-initialized, copy-initialized from an expression of the same or a derived class type ([dcl.init]), or default-initialized, overload resolution selects the constructor. For direct-initialization or default-initialization that is not in the context of copy-initialization, the candidate functions are all the constructors of the class of the object being initialized.
+> When objects of class type are direct-initialized, copy-initialized from an expression of the same or a derived class type (§[dcl.init]), or default-initialized, overload resolution selects the constructor. For direct-initialization or default-initialization that is not in the context of copy-initialization, the candidate functions are all the constructors of the class of the object being initialized.
 
 So for the first case (direct-initialization), both the constructors are considered, and the one taking an `int` is a better match.
 
 The paragraph continues:
 
-> For copy-initialization (including default initialization in the context of copy-initialization), the candidate functions are all the converting constructors ([class.conv.ctor]) of that class.
+> For copy-initialization (including default initialization in the context of copy-initialization), the candidate functions are all the converting constructors (§[class.conv.ctor]) of that class.
 
 And what is a converting constructor? §[class.conv.ctor]¶1:
 

@@ -1,4 +1,4 @@
-According to the [dcl.fct.def.delete]¶2:
+According to the §[dcl.fct.def.delete]¶2:
 
 > A program that refers to a deleted function implicitly or explicitly, other than to declare it, is ill-formed.
 
