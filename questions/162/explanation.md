@@ -60,4 +60,4 @@ Finally, we continue our unqualified search in the global scope, find the declar
 
 #### Note:
 
-In practice, not all compilers obey these rules, and some of them produce (erroneously) the code that outputs `2`. For example, GCC 4.9.3 - `1`, Clang 3.8.1 - `1`, Microsoft C++ 19.00.24210 - `2`, Intel C++ 15.0.7.287 (On Windows) - `2`. Even if the implementation you use calls `B::f()` for the unqualified `f()`, you should **not** rely on this behavior.
+In practice, not all compilers obey these rules, and some of them produce (erroneously) the code that outputs `2`. For example, GCC 14.2 - `1`, Clang 18.0.1 - `1`, Microsoft C++ 19.40 - `2`, Intel C++ 15.0.7.287 (On Windows) - `2`. Even if the implementation you use calls `B::f()` for the unqualified `f()`, you should **not** rely on this behavior.
