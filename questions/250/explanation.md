@@ -10,13 +10,15 @@ When a function is overloaded, we first need to find which of the functions are 
 
 First let's look at the call `foo(1)`. The explanation is lengthy, but rest assured we reuse most of it in the much shorter explanation of `foo(1,2)`! 
 
-We start by deducing the template arguments for both overloads. For `foo₁`, the argument `1` is used to deduce `T` to be `int`. It's signature is then `foo₁(int, ...)`. However, for overload resolution we ignore the `...` since it doesn't have a matching argument: §[over.match.viable]¶2.3:
+We start by deducing the template arguments for both overloads. For `foo₁`, the argument `1` is used to deduce `T` to be `int`. Its signature is then `foo₁(int, ...)`. Is it viable? §[over.match.viable]¶2.1:
 
-> For the purposes of overload resolution, the parameter list is truncated on the right, so that there are exactly *m* parameters.
+> — If there are `m` arguments in the list, all candidate functions having exactly `m` parameters are viable.
 
-So we end up with the viable function `foo₁(int)`.
+But don't we have 2 parameters and 1 argument? It turns out an ellipsis is not considered to be a parameter in this context since it's not included in the *parameter-declaration* grammar production (§[dcl.fct]¶nt:parameter-declaration).
 
-For `foo₂`, `T...` is a function parameter pack. The argument `1`  is used to deduce this as one `int`, and it's signature is `foo₂(int)`.
+Regarding §[over.match.viable]¶3 and §[over.match.viable]¶4, `foo₁` doesn't have any constraints and there exists an implicit conversion sequence from `1` to `int` (namely, an empty standard conversion sequence since no conversions are required). So `foo₁` is viable.
+
+For `foo₂`, `T...` is a function parameter pack. The argument `1` is used to deduce this as one `int`, and its signature is `foo₂(int)`. The same reasoning as above applies, concluding that `foo₂` is viable.
 
 So, both `foo`s are viable. Which one is best? §[over.match.best]¶2:
 
@@ -26,16 +28,8 @@ So, both `foo`s are viable. Which one is best? §[over.match.best]¶2:
 
 > — `F1` and `F2` are function template specializations, and the function template for `F1` is more specialized than the template for `F2` according to the partial ordering rules described in §[temp.func.order] (...)
 
-I won't go into all the details for partial ordering here, but skip to the interesting parts. In short, we transform each specialization by substituting each template parameter with a unique, made-up type and get `foo₁(X, ...)` and `foo₂(Y)`. Then we do deduction from each transformed function to the other, original template.
-
-Again, the ellipsis is ignored since it doesn't have an argument at the call site: §[temp.deduct.partial]¶3:
-
-> The types used to determine the ordering depend on the context in which the partial ordering is done:
-> - In the context of a function call, the types used are those function parameter types for which the function call has arguments.
-
-We now do deduction of  `foo₂(T...)` from `foo₁(X)`, which deduces `T=X`.
-
-We then do deduction of `foo₁(T)` from `foo₂(Y)`. It looks like we would get `T=Y`, but §[temp.deduct.type]¶9.2 says:
+We won't go into all the details for partial ordering here, but skip to the interesting parts. In short, we transform each specialization by substituting each template parameter with a unique, made-up type and get `foo₁(X, ...)` and `foo₂(Y)`.
+We now do deduction of `foo₂(T...)` from `foo₁(X)`, which deduces `T=X`. We then do deduction of `foo₁(T)` from `foo₂(Y)`. It looks like we would get `T=Y`, but §[temp.deduct.type]¶9.2 says:
 
 > During partial ordering, if `A`<sub>*i*</sub> was originally a pack expansion:
 >
@@ -53,10 +47,14 @@ Again we start by deducing the template arguments. For `foo₁`, the first argum
 
 For `foo₂`, `T...` is a function parameter pack. The arguments `1` and `2` are used to deduce this as two `int`s, and its signature is `foo₂(int, int)`.
 
+`foo₂` is viable for the same reasons as before, `foo₁` is viable due to §[over.match.viable]¶2.2:
+
+> A candidate function having fewer than `m` parameters is viable only if it has an ellipsis in its parameter list (§[dcl.fct]). For the purposes of overload resolution, any argument for which there is no corresponding parameter is considered to “match the ellipsis” (§[over.ics.ellipsis]).
+
 Which of these is the best match? We turn to §[over.match.best.general]¶2.1 which checks whether for some argument of a function call there exists a better implicit conversion sequence from this argument to the corresponding parameter in the other function call.
 
-For both templates, the first argument is an exact match. For `foo₁`, the second argument `2` requires an ellipsis conversion sequence to match the second parameter `...`: §[over.ics.ellipsis]¶1:
+For both templates, the first argument is an exact match. For `foo₁`, the second argument `2` requires an ellipsis conversion sequence to match the ellipsis parameter specification `...`: §[over.ics.ellipsis]¶1:
 
-> An ellipsis conversion sequence occurs when an argument in a function call is matched with the ellipsis parameter specification of the function called
+> An ellipsis conversion sequence occurs when an argument in a function call is matched with the ellipsis parameter specification of the function called (see [§expr.call]).
 
 For `foo₂`, no conversion is required, so it's a better match. The second `foo` is called, and `B` is printed.
