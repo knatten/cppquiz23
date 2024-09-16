@@ -14,9 +14,9 @@ We start by deducing the template arguments for both overloads. For `foo₁`, th
 
 > — If there are `m` arguments in the list, all candidate functions having exactly `m` parameters are viable.
 
-But don't we have 2 parameters and 1 argument? It turns out an ellipsis is not considered to be a parameter in this context since it's not included in the *parameter-declaration* grammar production (§[dcl.fct]¶nt:parameter-declaration).
+But don't we have 2 parameters and 1 argument? It turns out an ellipsis is not considered to be a parameter in this context since it's not included in the *parameter-declaration-list* grammar production (§[dcl.fct]¶nt:parameter-declaration-list).
 
-Regarding §[over.match.viable]¶3 and §[over.match.viable]¶4, `foo₁` doesn't have any constraints and there exists an implicit conversion sequence from `1` to `int` (namely, an empty standard conversion sequence since no conversions are required). So `foo₁` is viable.
+`1` is already an `int`, matching the parameter type `int`, so `foo₁` is viable.
 
 For `foo₂`, `T...` is a function parameter pack. The argument `1` is used to deduce this as one `int`, and its signature is `foo₂(int)`. The same reasoning as above applies, concluding that `foo₂` is viable.
 
