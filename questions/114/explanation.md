@@ -10,4 +10,4 @@ However, `r` refers to its object as a const instance of `S`. That constness cha
 
 The constness of `r`'s referent is also propagated to its members `u` and `p` (meaning one could not perform a mutating operation on `u`, e.g., calling `r.u.reset()`), but this has no effect on the instance of `C` that they both point *to*. That is, the pointers themselves become const, but the pointed-to objects remain non-const. Hence, they both still call the non-const version of `C::foo()`.
 
-The constness of the member `S::p` is the same for both `s` and `r`. Because it is declared as a const pointer, it does not change constness to follow the const-ness of its instance of `S` but remains a const pointer to a non-const object.
+The constness of the member `S::p` is the same for both `s` and `r`. Because it is declared as a const pointer, it does not change constness to follow the constness of its instance of `S` but remains a const pointer to a non-const object.

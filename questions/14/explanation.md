@@ -1,4 +1,5 @@
 §[basic.start.dynamic]¶5 in the standard:
+
 > It is implementation-defined whether the dynamic initialization of a non-block non-inline variable with static storage duration is sequenced before the first statement of main or is deferred. If it is deferred, it strongly happens before any non-initialization odr-use of any non-inline function or non-inline variable defined in the same translation unit as the variable to be initialized.
 
 Since `A()` is not `constexpr`, the initialization of `a` is dynamic. There are two possibilities:

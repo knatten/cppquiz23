@@ -6,11 +6,15 @@ Does `S{}` refer to the deleted constructor? That depends on whether this is val
 
 The rules for whether a struct is an aggregate are quite complex §[dcl.init.aggr]¶1:
 
-> An *aggregate* is an array or a class with
-> - no user-declared or inherited constructors,
-> - no private or protected direct non-static data members,
-> - no private or protected direct base classes, and
-> - no virtual functions or virtual base classes.
+> An *aggregate* is an array or a class (§[class]) with
+>
+> — no user-declared or inherited constructors (§[class.ctor]),
+>
+> — no private or protected direct non-static data members (§[class.access]),
+>
+> — no private or protected direct base classes (§[class.access.base]), and
+>
+> — no virtual functions (§[class.virtual]) or virtual base classes (§[class.mi]).
 
 Here, the `S` default constructor is considered user-declared, so `S` isn't an aggregate, and `S{}` is using value initialization, and the program is ill-formed.
 

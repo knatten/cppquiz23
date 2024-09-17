@@ -16,7 +16,9 @@ where `try_emplace` is defined by §[map.modifiers]¶8:
 
 > ```
 > template<class... Args>
->   pair<iterator, bool> try_emplace(key_type&& k, Args&&... args);
+>  pair<iterator, bool> try_emplace(key_type&& k, Args&&... args);
+> template<class... Args>
+>  iterator try_emplace(const_iterator hint, key_type&& k, Args&&... args);
 > ```
 >
 > *Effects*: If the map already contains an element whose key is equivalent to `k`, there is no effect. Otherwise inserts an object of type `value_type` constructed with `piecewise_construct, forward_as_tuple(std::move(k)), forward_as_tuple(std::forward<Args>(args)...)`.

@@ -8,4 +8,4 @@ So both the evaluation of `std::max(x,y)` and `std::min(x,y)` return `x`, and bo
 
 We then set `x` to `11`, and print `max` and `min`, which are now both `11`.
 
-Some say it would be better if `min()` returned its first element, but `max()` returned its *last* element. Sean Parent explains his rationale for this in his BoostCon 2016 Keynote [Better Code]( https://www.youtube.com/watch?v=giNtMitSdfQ&t=1448s).
+Some say it would be better if `min()` returned its first element, but `max()` returned its *last* element. Sean Parent explains his rationale for this in his BoostCon 2016 Keynote [Better Code](https://www.youtube.com/watch?v=giNtMitSdfQ&t=1448s).

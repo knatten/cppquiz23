@@ -4,13 +4,13 @@ On the second line, `C c2 = c1;`, the object `c2` is copy-initialized, so the co
 
 Let's have a look at the standard:
 
-§[dcl.init]¶14:
+§[dcl.init.general]¶14:
 
 > The initialization that occurs in the `=` form of a *brace-or-equal-initializer* (...) is called *copy-initialization*.
 
 The initialization of `C c2 = c1;` is the "equal" part of a braced-or-equal-initializer, so we have copy-initialization.
 
-§[dcl.init]¶16:
+§[dcl.init.general]¶16:
 
 > — (...)
 >

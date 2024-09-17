@@ -1,1 +1,1 @@
-What is the difference between `X x;`and `X x();`?
+What is the difference between `X x;` and `X x();`?

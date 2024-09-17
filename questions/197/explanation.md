@@ -5,7 +5,8 @@ So this program has two variables named `j`. The first is the global one, the se
 When initializing `i` with the expression `j`, we need to do name lookup for `j`. If the local `j` is in scope at that point in the program, it will be used, otherwise, the global `j` will be used.
 
 §[basic.scope.pdecl]¶1:
-> The locus of a declaration that is a declarator is immediately after the complete declarator
+
+> The *locus* of a declaration (§[basic.pre]) that is a declarator is immediately after the complete declarator (§[dcl.decl]).
 
 So the *locus* of the local `j` is here:
 ```
@@ -15,7 +16,7 @@ int& i = j, j;
 
 And §[basic.lookup.general]¶2 says:
 
-> A program point *P* is said to follow any declaration in the same translation unit whose locus is before *P*.
+> A program point *P* is said to follow any declaration in the same translation unit whose locus (§[basic.scope.pdecl]) is before *P*.
 
 The locus of the local `j` is *after* the program point *P* where the reference `i` is bound, so *P* does not follow the declaration of the local `j`.
 

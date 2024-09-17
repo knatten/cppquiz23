@@ -4,6 +4,6 @@ On the next line, we call `b->foo()`, where `b` has the static type `A`, and the
 
 However, which default argument is used for the `int a` parameter to `foo()`? §[dcl.fct.default]¶10 in the standard:
 
-> A virtual function call uses the default arguments in the declaration of the virtual function determined by the static type of the pointer or reference denoting the object. An overriding function in a derived class does not acquire default arguments from the function it overrides.
+> A virtual function call (§[class.virtual]) uses the default arguments in the declaration of the virtual function determined by the static type of the pointer or reference denoting the object. An overriding function in a derived class does not acquire default arguments from the function it overrides.
 
 So `B::foo()` is called, but with the default argument from `A::foo()`, and the output is `B1`.

@@ -1,10 +1,14 @@
 §[expr.typeid]¶1:
-> The result of a `typeid` expression is an lvalue of static type `const std::type_info`
+
+> The result of a `typeid` expression is an lvalue of static type `const std::type_info` (...).
 
 and §[expr.unary.op]¶3:
+
 > The operand of the unary `&` operator shall be an lvalue of some type `T`. The result is a prvalue.
 >
-> (...) the result has type “pointer to T” and points to the designated object
+> — (...)
+>
+> — Otherwise, the result has type “pointer to `T`” and points to the designated object (...).
 
 So we're comparing two pointers to `const std::type_info`.
 

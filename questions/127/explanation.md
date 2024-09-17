@@ -2,12 +2,17 @@ The meaning of `decltype(E)` depends on whether `E` itself also is parenthesized
 
 §[dcl.type.decltype]¶1 in the standard:
 
-> — if E is an unparenthesized id-expression naming a structured binding (...)
-> — otherwise, if E is an unparenthesized id-expression naming a non-type template-parameter (...)
-> — otherwise, if E is an unparenthesized id-expression or an unparenthesized class member access (...)
-> — otherwise, if E is an xvalue, decltype(E) is T&&, where T is the type of E;
-> — otherwise, if E is an lvalue, decltype(E) is T&, where T is the type of E;
-> — otherwise, decltype(E) is the type of E.
+> — if `E` is an unparenthesized *id-expression* naming a structured binding (...);
+>
+> — otherwise, if `E` is an unparenthesized *id-expression* naming a non-type *template-parameter* (...);
+>
+> — otherwise, if `E` is an unparenthesized *id-expression* or an unparenthesized class member access (...);
+>
+> — otherwise, if `E` is an xvalue, `decltype(E)` is `T&&`, where `T` is the type of `E`;
+>
+> — otherwise, if `E` is an lvalue, `decltype(E)` is `T&`, where `T` is the type of `E`;
+>
+> — otherwise, `decltype(E)` is the type of `E`.
 
 All the examples in this question are parenthesized, so we only need to look at the latter three bullet points. Also, since the type of `(expression)` is the same as the type of `expression`, we can ignore the extra parentheses.
 
@@ -19,7 +24,7 @@ So the expression `j` here is an access to a class member, and we didn't `std::m
 
 But what's the type of the expression `j`? To figure that out, we need to know whether the function call operator of the closure type is `const` or not. §[expr.prim.lambda.closure]¶5:
 
-> it is a non-static member function or member function template that is declared const if and only if the lambda-expression’s parameter-declaration-clause is not followed by `mutable`
+> (...) it is a non-static member function or member function template (§[class.mfct.non.static]) that is declared `const` (§[class.mfct.non.static]) if and only if the *lambda-expression*'s *parameter-declaration-clause* is not followed by `mutable` (...).
 
 So we're accessing a class member from a `const` member function, which means that `T` above is `const int`, and `decltype(E)` is `const int&`. `00100` is printed.
 
