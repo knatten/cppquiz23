@@ -20,7 +20,7 @@ But don't we have 2 parameters and 1 argument? It turns out an ellipsis is not c
 
 For `foo₂`, `T...` is a function parameter pack. The argument `1` is used to deduce this as one `int`, and its signature is `foo₂(int)`. The same reasoning as above applies, concluding that `foo₂` is viable.
 
-So, both `foo`s are viable. Which one is best? §[over.match.best]¶2:
+So, both `foo`s are viable. Which one is best? §[over.match.best.general]¶2:
 
 > (...) a viable function `F1` is defined to be a better function than another viable function `F2` if (...)
 
