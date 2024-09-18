@@ -14,7 +14,7 @@ There is however this additional rule:
 
 > A *forwarding reference* is an rvalue reference to a cv-unqualified template parameter (...). If `P` is a forwarding reference and the argument is an lvalue, the type “lvalue reference to `A`” is used in place of `A` for type deduction.
 
-(cv-unqualified just means no `const` or `volatile`)
+(cv-unqualified just means no `const` or `volatile`.)
 
 `T&&` is indeed an rvalue reference to a cv-unqualified template parameter, so it is a forwarding reference.
 
@@ -28,8 +28,10 @@ In both cases, `t` itself is an lvalue, so without the call to `std::forward`, `
 
 §[forward]¶3 explains what `std::forward` does:
 
->     template<class T> constexpr T&& forward(remove_reference_t<T>& t) noexcept;
->     template<class T> constexpr T&& forward(remove_reference_t<T>&& t) noexcept;
+> ```
+> template<class T> constexpr T&& forward(remove_reference_t<T>& t) noexcept;
+> template<class T> constexpr T&& forward(remove_reference_t<T>&& t) noexcept;
+> ```
 >
 > *Mandates*: For the second overload, `is_lvalue_reference_v<T>` is `false`.
 >
@@ -49,7 +51,7 @@ Reference collapsing explains how `int&&&` above collapsed to `int&`. The mechan
 
 > If a *typedef-name* (...) denotes a type `TR` that is a reference to a type `T`, an attempt to create the type “lvalue reference to *cv* `TR`” creates the type “lvalue reference to `T`”, while an attempt to create the type “rvalue reference to *cv* `TR`” creates the type `TR`.
 >
-> [*Note 3*: This rule is known as reference collapsing. — *end note*]
+> [*Note 3*: This rule is known as reference collapsing. — *end note*]
 
 But what does template parameters have to do with typedef-names? It turns out that template-parameters *are* typedef-names: §[temp.param]¶3:
 

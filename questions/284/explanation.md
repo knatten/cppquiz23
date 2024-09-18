@@ -2,8 +2,10 @@ Perhaps surprisingly, this program has no undefined behaviour. `std::string`'s `
 
 §[string.access]¶2:
 
->     constexpr const_reference operator[](size_type pos) const;
->     constexpr reference       operator[](size_type pos);
+> ```
+> constexpr const_reference operator[](size_type pos) const;
+> constexpr reference       operator[](size_type pos);
+> ```
 >
 > *Preconditions*: `pos <= size()`.
 >

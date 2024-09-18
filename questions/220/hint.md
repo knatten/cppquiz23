@@ -1,1 +1,1 @@
-C++ uses short-circuit evaluation in this case
+C++ uses short-circuit evaluation in this case.

@@ -12,6 +12,6 @@ Note [1]: §[dcl.ref]¶6 in the standard:
 
 > If a *typedef-name* (§[dcl.typedef], §[temp.param]) or a *decltype-specifier* (§[dcl.type.decltype]) denotes a type `TR` that is a reference to a type `T`, an attempt to create the type “lvalue reference to *cv* `TR`” creates the type “lvalue reference to `T`”, while an attempt to create the type “rvalue reference to *cv* `TR`” creates the type `TR`.
 
-The example at the end of that paragraph is worth a look. 
+The example at the end of that paragraph is worth a look.
 
 Note from the contributor: This demonstrates Scott Meyers's advice to use `std::forward` for forwarding references, and `std::move` for rvalue references.

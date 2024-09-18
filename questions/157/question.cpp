@@ -3,7 +3,7 @@
 
 struct A {};
 
-int main() 
+int main()
 {
     std::cout<< (&typeid(A) == &typeid(A));
 }

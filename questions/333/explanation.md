@@ -2,6 +2,6 @@ There is no `-->` operator in C++, this is actually the two operators `--` and `
 
 > Blanks, horizontal and vertical tabs, newlines, formfeeds, and comments (collectively, “whitespace”), as described below, are ignored except as they serve to separate tokens.
 >
-> [*Note 1*: Some whitespace is required to separate otherwise adjacent identifiers, keywords, numeric literals, and alternative tokens containing alphabetic characters. — *end note*]
+> [*Note 1*: Some whitespace is required to separate otherwise adjacent identifiers, keywords, numeric literals, and alternative tokens containing alphabetic characters. — *end note*]
 
 So this should be read as `while (x-- > 0)`, meaning that `x` is `2` on the first iteration, `1` on the next, and `0` on the last (since we're post decrementing it and comparing the not-yet-decremented value to `0`). The program prints `210`.

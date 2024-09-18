@@ -1,1 +1,1 @@
-§[expr.sub]¶1 in the standard says "The expression E1[E2] is identical (by definition) to  *((E1)+(E2))".
+The expression `E1[E2]` is identical to `*((E1)+(E2))`.

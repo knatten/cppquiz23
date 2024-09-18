@@ -16,7 +16,7 @@ int f2() {
 void g(int, int) {}
 
 void h() {
- g(f1(), f2()); 
+  g(f1(), f2());
 }
 
 int main() {

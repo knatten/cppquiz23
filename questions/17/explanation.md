@@ -4,7 +4,7 @@ The derived class destructor `~B()` first executes its own body, and then calls 
 
 Let's have a look at the standard:
 
-Initialization order is defined in  §[class.base.init]¶13:
+Initialization order is defined in §[class.base.init]¶13:
 
 > In a non-delegating constructor, initialization proceeds in the following order:
 >

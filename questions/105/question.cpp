@@ -1,11 +1,9 @@
 #include <iostream>
 
-using namespace std;
-
 class A {
 public:
-  A() { cout << "a"; }
-  ~A() { cout << "A"; }
+  A() { std::cout << "a"; }
+  ~A() { std::cout << "A"; }
 };
 
 int i = 1;

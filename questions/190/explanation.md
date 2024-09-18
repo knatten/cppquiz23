@@ -1,6 +1,6 @@
 For both `a1 + a2` and `a1 == a2`, the built-in operators `operator+` and `operator==` for `int` are used. The two objects `a1` and `a2` are implicitly converted first to `bool` and then to `int` before calling the operator. In both cases, they convert first to `true`, then to `1`.
 
-`1 + 1`  equals `2`, and `1 == 1` is true, so `21` is printed.
+`1 + 1` equals `2`, and `1 == 1` is true, so `21` is printed.
 
 ##### Detailed explanation:
 

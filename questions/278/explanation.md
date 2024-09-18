@@ -2,11 +2,11 @@
 
 §[tuple.elem]¶5:
 
+> ```
 > (...)
->
->     template<class T, class... Types>
->       constexpr const T& get(const tuple<Types...>& t) noexcept;
->
+> template<class T, class... Types>
+>   constexpr const T& get(const tuple<Types...>& t) noexcept;
 > (...)
+> ```
 >
 > *Mandates*: The type `T` occurs exactly once in `Types`.

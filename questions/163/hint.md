@@ -1,1 +1,1 @@
-What is the type deduced by auto?
+What is the type deduced by `auto`?

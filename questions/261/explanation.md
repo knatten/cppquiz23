@@ -26,7 +26,9 @@ using stringstream = basic_stringstream<char>
 
 Let's have a look at the `basic_stringstream` constructor: §[stringstream.cons]¶2:
 
-> `explicit basic_stringstream(const basic_string<charT, traits, Allocator>& s, ios_base::openmode which = ios_base::out | ios_base::in);`
+> ```
+> explicit basic_stringstream(const basic_string<charT, traits, Allocator>& s, ios_base::openmode which = ios_base::out | ios_base::in);
+> ```
 >
 > *Effects*: Initializes the base class with `basic_iostream<charT, traits>(addressof(sb))` (§[iostream.cons]) and `sb` with `basic_stringbuf<charT, traits, Allocator>(s, which)`.
 
@@ -41,21 +43,21 @@ So we get out a copy of that, and `a` is printed. (Note that `str()` does not mo
 Then we stream "b" into the `basic_stringstream`. This operation is defined in terms of some of the `basic_stringstream` base classes, so here's (parts of) its inheritance diagram, for reference:
 
 ```
-           --------- 
+           ---------
           |basic_ios|
-           --------- 
+           ---------
           /         \
  -------------   -------------
 |basic_istream| |basic_ostream|
  -------------   -------------
            \       /
-         -------------- 
+         --------------
         |basic_iostream|
-         -------------- 
+         --------------
                |
-        ------------------ 
+        ------------------
        |basic_stringstream|
-        ------------------ 
+        ------------------
 ```
 
 `basic_stringstream` inherits `operator<<` from `ostream`, which according to §[ostream]¶2:
@@ -64,7 +66,9 @@ Then we stream "b" into the `basic_stringstream`. This operation is defined in t
 
 `rdbuf()` here refers to our `basic_stringbuf`. `basic_stringbuf` inherits `sputc` from `basic_streambuf`. §[streambuf.pub.put]¶1:
 
-> `int_type sputc(char_type c);`
+> ```
+> int_type sputc(char_type c);
+> ```
 >
 > *Effects*: (...) stores `c` at the next pointer for the output sequence, increments the pointer (...).
 

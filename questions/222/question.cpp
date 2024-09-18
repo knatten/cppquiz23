@@ -1,9 +1,7 @@
 #include <variant>
 #include <iostream>
- 
-using namespace std;
 
 int main() {
-   variant<int, double, char> v;
-   cout << v.index();
+    std::variant<int, double, char> v;
+    std::cout << v.index();
 }

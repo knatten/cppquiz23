@@ -5,7 +5,7 @@ int main() {
     int i = 0;
 
     switch (n % 2) {
-    case 0: 
+    case 0:
     do {
     ++i;
     case 1: ++i;

@@ -8,9 +8,9 @@ The function template `g` instantiates to `void g<float,int>(float&& v1, int&& v
 
 First, the template parameter pack is deduced as `float, int`, and the function parameter pack `(T &&... v)` is expanded to `(float&& v1, int&& v2)`, since `1.0f` is a floating-point literal and `2` is an integer literal.
 
-Inside `g`, the named rvalue references `v1` and `v2` are treated as lvalues. §[basic.lval]¶4:
+Inside `g`, the named rvalue references `v1` and `v2` are treated as lvalues. §[basic.lval]¶note-3:
 
-> In general, the effect of this rule is that named rvalue references are treated as lvalues and unnamed rvalue references to objects are treated as xvalues; (...)
+> In general, the effect of this rule is that named rvalue references are treated as lvalues and unnamed rvalue references to objects are treated as xvalues (...).
 
 The body of `g` consists of the fold-expression `(f(v), ...)` which is a unary right fold with `f(v)` as a cast-expression and `,` as a fold-operator. §[expr.prim.fold]¶2:
 

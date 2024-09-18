@@ -10,16 +10,18 @@ The fact that an object is first default constructed is covered by §[map.access
 > mapped_type& operator[](key_type&& x);
 > ```
 >
-> *Effects*: Equivalent to: `return try_emplace(std​::​move(x)).first->second;`
+> *Effects*: Equivalent to: `return try_emplace(std::move(x)).first->second;`
 
 where `try_emplace` is defined by §[map.modifiers]¶8:
 
 > ```
 > template<class... Args>
->   pair<iterator, bool> try_emplace(key_type&& k, Args&&... args);
+>  pair<iterator, bool> try_emplace(key_type&& k, Args&&... args);
+> template<class... Args>
+>  iterator try_emplace(const_iterator hint, key_type&& k, Args&&... args);
 > ```
 >
-> *Effects*: If the map already contains an element whose key is equivalent to `k`, there is no effect. Otherwise inserts an object of type `value_type` constructed with `piecewise_construct, forward_as_tuple(std​::​move(k)), forward_as_tuple(std​::​forward<Args>(args)...)`.
+> *Effects*: If the map already contains an element whose key is equivalent to `k`, there is no effect. Otherwise inserts an object of type `value_type` constructed with `piecewise_construct, forward_as_tuple(std::move(k)), forward_as_tuple(std::forward<Args>(args)...)`.
 
 `value_type` is just a `typedef` for `pair<const Key, T>`, which in our case is `pair<const int, C>`. So it inserts a `pair(7, C())`, which calls the default constructor for `C`.
 

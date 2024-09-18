@@ -1,6 +1,6 @@
 The functions called by `f<int>()` and `f<const int>()` actually have the same function type, but they are still distinct functions, so each get their own distinct `static int stat`.
 
-When we call `f<int>()` for the first time, `stat` is `0`, and `0` is printed. `stat` is then incremented to `1`. 
+When we call `f<int>()` for the first time, `stat` is `0`, and `0` is printed. `stat` is then incremented to `1`.
 When we call `f<int>()` again, `stat` is `1`, and `1` is printed. `stat` is then incremented to `2`.
 We then call `f<const int>()`, which is a distinct function with its own `stat`, which is `0`, and `0` is printed.
 

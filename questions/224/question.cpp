@@ -1,7 +1,7 @@
 #include <iostream>
 
 struct Base {
-    virtual int f() = 0; 
+    virtual int f() = 0;
 };
 
 int Base::f() { return 1; }

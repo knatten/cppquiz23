@@ -1,1 +1,1 @@
-This question asks if `nullptr` is a pointer. `nullptr` is a prvalue of type `std​::​nullptr_­t`.
+This question asks if `nullptr` is a pointer. `nullptr` is a prvalue of type `std::nullptr_t`.

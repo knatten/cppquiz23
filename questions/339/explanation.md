@@ -4,9 +4,11 @@ More details:
 
 First, we call `get` for the first time. §[futures.unique.future]¶16:
 
->     R future::get();
->     R& future<R&>::get();
->     void future<void>::get();
+> ```
+> R future::get();
+> R& future<R&>::get();
+> void future<void>::get();
+> ```
 >
 > *Effects*:
 >
@@ -28,12 +30,14 @@ Then we try to call `get` again, but §[futures.unique.future]¶3 says:
 >
 > (...)
 >
-> *Recommended practice*: Implementations should detect this case and throw an object of type `future_error` with an error condition of `future_errc​::​no_state`.
+> *Recommended practice*: Implementations should detect this case and throw an object of type `future_error` with an error condition of `future_errc::no_state`.
 
 So if `valid() == false`, calling `get` a second time is UB (but an exception is usually thrown). What does `valid()` do? §[futures.unique.future]¶20:
 
-> `bool valid() const noexcept;`
+> ```
+> bool valid() const noexcept;
+> ```
 >
 > *Returns*: `true` only if `*this` refers to a shared state.
 
-The first time we called `get`, we gave up our reference to the shared state, and from then on `*this` no longer refers to a shared state, `valid()`  now returns `false`, and calling `get` again is UB.
+The first time we called `get`, we gave up our reference to the shared state, and from then on `*this` no longer refers to a shared state, `valid()` now returns `false`, and calling `get` again is UB.

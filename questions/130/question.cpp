@@ -1,10 +1,9 @@
 #include <iostream>
-using namespace std;
 
 template<typename T>
 void adl(T)
 {
-  cout << "T";
+  std::cout << "T";
 }
 
 struct S
@@ -20,7 +19,7 @@ void call_adl(T t)
 
 void adl(S)
 {
-  cout << "S";
+  std::cout << "S";
 }
 
 int main ()
